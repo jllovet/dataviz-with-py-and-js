@@ -2,23 +2,22 @@ version: "3"
 services:
   anaconda:
     image: anaconda
-    container_name: "anaconda"
+    container_name: "anaconda-python-3.7"
     # user: "monty"
     build: "."
     working_dir: /usr/src/app/
     # env_file: .env
     # command: tail -F anything
-      # Will keep the container running while there is no application defined
-      # To open a shell: docker exec -it anaconda bash
+      # Uncommenting command above will keep the container running 
+      # even while there is no application defined
+      # To open a shell, two options are: 
+      # docker exec -it anaconda bash
       # docker run --name anaconda-shell -it anaconda
-      # where composename is the name that docker-compose prepends to your containers.
 
     # environment:
-    #   NODE_ENV: ${NODE_ENV}
     ports: 
       - "3000:3000"
     volumes:
       - "./:/usr/src/app"
-      # - "./node_modules:/usr/src/app/node_modules"
     # depends_on:
 
