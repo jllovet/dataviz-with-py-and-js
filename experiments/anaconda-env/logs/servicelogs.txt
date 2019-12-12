@@ -1,0 +1,154 @@
+Attaching to 
+Attaching to 
+Attaching to 
+Attaching to 
+Attaching to anaconda-python-3.7
+[36manaconda-python-3.7 |[0m 2019-12-12T21:56:35.707664900Z [I 21:56:35.706 NotebookApp] Writing notebook server cookie secret to /home/monty/.local/share/jupyter/runtime/notebook_cookie_secret
+[36manaconda-python-3.7 |[0m 2019-12-12T21:56:36.681129000Z [I 21:56:36.678 NotebookApp] JupyterLab extension loaded from /opt/conda/lib/python3.7/site-packages/jupyterlab
+[36manaconda-python-3.7 |[0m 2019-12-12T21:56:36.681271600Z [I 21:56:36.678 NotebookApp] JupyterLab application directory is /opt/conda/share/jupyter/lab
+[36manaconda-python-3.7 |[0m 2019-12-12T21:56:36.691425600Z [I 21:56:36.688 NotebookApp] Serving notebooks from local directory: /usr/src
+[36manaconda-python-3.7 |[0m 2019-12-12T21:56:36.691549300Z [I 21:56:36.688 NotebookApp] The Jupyter Notebook is running at:
+[36manaconda-python-3.7 |[0m 2019-12-12T21:56:36.691605600Z [I 21:56:36.688 NotebookApp] http://ef47e18b5cff:3000/?token=8245fa3564b156a52b95063775e90bc4bd28996a3e3a48eb
+[36manaconda-python-3.7 |[0m 2019-12-12T21:56:36.691657400Z [I 21:56:36.689 NotebookApp]  or http://127.0.0.1:3000/?token=8245fa3564b156a52b95063775e90bc4bd28996a3e3a48eb
+[36manaconda-python-3.7 |[0m 2019-12-12T21:56:36.691715900Z [I 21:56:36.689 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[36manaconda-python-3.7 |[0m 2019-12-12T21:56:36.708679400Z [C 21:56:36.707 NotebookApp] 
+[36manaconda-python-3.7 |[0m 2019-12-12T21:56:36.708952800Z     
+[36manaconda-python-3.7 |[0m 2019-12-12T21:56:36.709162700Z     To access the notebook, open this file in a browser:
+[36manaconda-python-3.7 |[0m 2019-12-12T21:56:36.709231900Z         file:///home/monty/.local/share/jupyter/runtime/nbserver-6-open.html
+[36manaconda-python-3.7 |[0m 2019-12-12T21:56:36.710093200Z     Or copy and paste one of these URLs:
+[36manaconda-python-3.7 |[0m 2019-12-12T21:56:36.710211600Z         http://ef47e18b5cff:3000/?token=8245fa3564b156a52b95063775e90bc4bd28996a3e3a48eb
+[36manaconda-python-3.7 |[0m 2019-12-12T21:56:36.711787500Z      or http://127.0.0.1:3000/?token=8245fa3564b156a52b95063775e90bc4bd28996a3e3a48eb
+[36manaconda-python-3.7 |[0m 2019-12-12T21:56:39.925708500Z [I 21:56:39.924 NotebookApp] 302 GET /?token=8245fa3564b156a52b95063775e90bc4bd28996a3e3a48eb (192.168.48.1) 1.75ms
+[36manaconda-python-3.7 |[0m 2019-12-12T21:57:15.865156900Z [C 21:57:15.856 NotebookApp] received signal 15, stopping
+[36manaconda-python-3.7 |[0m 2019-12-12T21:57:15.865283700Z [I 21:57:15.857 NotebookApp] Shutting down 0 kernels
+[36manaconda-python-3.7 exited with code 0
+[0mAttaching to anaconda-python-3.7
+[36manaconda-python-3.7 |[0m 2019-12-12T21:57:22.670626300Z [I 21:57:22.669 NotebookApp] Writing notebook server cookie secret to /home/monty/.local/share/jupyter/runtime/notebook_cookie_secret
+[36manaconda-python-3.7 |[0m 2019-12-12T21:57:23.168578900Z [I 21:57:23.167 NotebookApp] JupyterLab extension loaded from /opt/conda/lib/python3.7/site-packages/jupyterlab
+[36manaconda-python-3.7 |[0m 2019-12-12T21:57:23.169784900Z [I 21:57:23.168 NotebookApp] JupyterLab application directory is /opt/conda/share/jupyter/lab
+[36manaconda-python-3.7 |[0m 2019-12-12T21:57:23.177481400Z [I 21:57:23.173 NotebookApp] Serving notebooks from local directory: /usr/src
+[36manaconda-python-3.7 |[0m 2019-12-12T21:57:23.177602200Z [I 21:57:23.173 NotebookApp] The Jupyter Notebook is running at:
+[36manaconda-python-3.7 |[0m 2019-12-12T21:57:23.177651500Z [I 21:57:23.173 NotebookApp] http://91fc5cbe35e0:3000/?token=d87bcb15d9e25a3d90c8fdc3497e60ba869c100576d190de
+[36manaconda-python-3.7 |[0m 2019-12-12T21:57:23.177699600Z [I 21:57:23.174 NotebookApp]  or http://127.0.0.1:3000/?token=d87bcb15d9e25a3d90c8fdc3497e60ba869c100576d190de
+[36manaconda-python-3.7 |[0m 2019-12-12T21:57:23.177745800Z [I 21:57:23.174 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[36manaconda-python-3.7 |[0m 2019-12-12T21:57:23.185222600Z [C 21:57:23.184 NotebookApp] 
+[36manaconda-python-3.7 |[0m 2019-12-12T21:57:23.185410400Z     
+[36manaconda-python-3.7 |[0m 2019-12-12T21:57:23.185447800Z     To access the notebook, open this file in a browser:
+[36manaconda-python-3.7 |[0m 2019-12-12T21:57:23.185482300Z         file:///home/monty/.local/share/jupyter/runtime/nbserver-7-open.html
+[36manaconda-python-3.7 |[0m 2019-12-12T21:57:23.185517300Z     Or copy and paste one of these URLs:
+[36manaconda-python-3.7 |[0m 2019-12-12T21:57:23.185551500Z         http://91fc5cbe35e0:3000/?token=d87bcb15d9e25a3d90c8fdc3497e60ba869c100576d190de
+[36manaconda-python-3.7 |[0m 2019-12-12T21:57:23.185585700Z      or http://127.0.0.1:3000/?token=d87bcb15d9e25a3d90c8fdc3497e60ba869c100576d190de
+[36manaconda-python-3.7 |[0m 2019-12-12T21:58:14.017938200Z [W 21:58:13.998 NotebookApp] Clearing invalid/expired login cookie username-127-0-0-1-3000
+[36manaconda-python-3.7 |[0m 2019-12-12T21:58:14.018054700Z [W 21:58:14.000 NotebookApp] Forbidden
+[36manaconda-python-3.7 |[0m 2019-12-12T21:58:14.018108700Z [W 21:58:14.001 NotebookApp] 403 GET /api/sessions?_=1576187800885 (192.168.80.1) 4.65ms referer=http://127.0.0.1:3000/tree
+[36manaconda-python-3.7 |[0m 2019-12-12T21:58:14.026011100Z [W 21:58:14.025 NotebookApp] Clearing invalid/expired login cookie username-127-0-0-1-3000
+[36manaconda-python-3.7 |[0m 2019-12-12T21:58:14.027148400Z [W 21:58:14.026 NotebookApp] Forbidden
+[36manaconda-python-3.7 |[0m 2019-12-12T21:58:14.028536200Z [W 21:58:14.027 NotebookApp] 403 GET /api/terminals?_=1576187800886 (192.168.80.1) 3.56ms referer=http://127.0.0.1:3000/tree
+[36manaconda-python-3.7 |[0m 2019-12-12T22:01:28.683958100Z [W 22:01:28.682 NotebookApp] Forbidden
+[36manaconda-python-3.7 |[0m 2019-12-12T22:01:28.684550400Z [W 22:01:28.683 NotebookApp] 403 GET /api/terminals?_=1576187642442 (192.168.80.1) 3.00ms referer=http://127.0.0.1:3000/tree
+[36manaconda-python-3.7 |[0m 2019-12-12T22:01:28.687348800Z [W 22:01:28.686 NotebookApp] Forbidden
+[36manaconda-python-3.7 |[0m 2019-12-12T22:01:28.688818000Z [W 22:01:28.687 NotebookApp] 403 GET /api/sessions?_=1576187642441 (192.168.80.1) 3.17ms referer=http://127.0.0.1:3000/tree
+[36manaconda-python-3.7 |[0m 2019-12-12T22:01:29.527763700Z [W 22:01:29.524 NotebookApp] Forbidden
+[36manaconda-python-3.7 |[0m 2019-12-12T22:01:29.528388300Z [W 22:01:29.526 NotebookApp] 403 GET /api/sessions?_=1576187800887 (192.168.80.1) 2.89ms referer=http://127.0.0.1:3000/tree
+[36manaconda-python-3.7 |[0m 2019-12-12T22:01:29.532024500Z [W 22:01:29.529 NotebookApp] Forbidden
+[36manaconda-python-3.7 |[0m 2019-12-12T22:01:29.532192800Z [W 22:01:29.530 NotebookApp] 403 GET /api/terminals?_=1576187800888 (192.168.80.1) 2.21ms referer=http://127.0.0.1:3000/tree
+[36manaconda-python-3.7 |[0m 2019-12-12T22:01:31.746683700Z [I 22:01:31.745 NotebookApp] 302 GET /tree (192.168.80.1) 1.21ms
+[36manaconda-python-3.7 |[0m 2019-12-12T22:06:35.685633600Z [C 22:06:35.680 NotebookApp] received signal 15, stopping
+[36manaconda-python-3.7 |[0m 2019-12-12T22:06:35.685735200Z [I 22:06:35.682 NotebookApp] Shutting down 0 kernels
+[36manaconda-python-3.7 exited with code 0
+[0mAttaching to anaconda-python-3.7
+[36manaconda-python-3.7 |[0m 2019-12-12T22:06:49.206269000Z [I 22:06:49.205 NotebookApp] Writing notebook server cookie secret to /home/monty/.local/share/jupyter/runtime/notebook_cookie_secret
+[36manaconda-python-3.7 |[0m 2019-12-12T22:06:49.669236600Z [I 22:06:49.668 NotebookApp] JupyterLab extension loaded from /opt/conda/lib/python3.7/site-packages/jupyterlab
+[36manaconda-python-3.7 |[0m 2019-12-12T22:06:49.669740700Z [I 22:06:49.669 NotebookApp] JupyterLab application directory is /opt/conda/share/jupyter/lab
+[36manaconda-python-3.7 |[0m 2019-12-12T22:06:49.675282100Z [I 22:06:49.674 NotebookApp] Serving notebooks from local directory: /usr/src
+[36manaconda-python-3.7 |[0m 2019-12-12T22:06:49.676027200Z [I 22:06:49.675 NotebookApp] The Jupyter Notebook is running at:
+[36manaconda-python-3.7 |[0m 2019-12-12T22:06:49.679601300Z [I 22:06:49.675 NotebookApp] http://cab5298d7367:3000/?token=b19062522816a141e1cc4b4a2e6a474c2775efc1624714c9
+[36manaconda-python-3.7 |[0m 2019-12-12T22:06:49.681068900Z [I 22:06:49.679 NotebookApp]  or http://127.0.0.1:3000/?token=b19062522816a141e1cc4b4a2e6a474c2775efc1624714c9
+[36manaconda-python-3.7 |[0m 2019-12-12T22:06:49.683514500Z [I 22:06:49.681 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[36manaconda-python-3.7 |[0m 2019-12-12T22:06:49.691168000Z [C 22:06:49.690 NotebookApp] 
+[36manaconda-python-3.7 |[0m 2019-12-12T22:06:49.691288300Z     
+[36manaconda-python-3.7 |[0m 2019-12-12T22:06:49.691342200Z     To access the notebook, open this file in a browser:
+[36manaconda-python-3.7 |[0m 2019-12-12T22:06:49.691391800Z         file:///home/monty/.local/share/jupyter/runtime/nbserver-7-open.html
+[36manaconda-python-3.7 |[0m 2019-12-12T22:06:49.691440200Z     Or copy and paste one of these URLs:
+[36manaconda-python-3.7 |[0m 2019-12-12T22:06:49.691497300Z         http://cab5298d7367:3000/?token=b19062522816a141e1cc4b4a2e6a474c2775efc1624714c9
+[36manaconda-python-3.7 |[0m 2019-12-12T22:06:49.691548600Z      or http://127.0.0.1:3000/?token=b19062522816a141e1cc4b4a2e6a474c2775efc1624714c9
+[36manaconda-python-3.7 |[0m 2019-12-12T22:07:09.049172000Z [I 22:07:09.048 NotebookApp] 302 GET /?token=b19062522816a141e1cc4b4a2e6a474c2775efc1624714c9 (192.168.96.1) 1.92ms
+[36manaconda-python-3.7 |[0m 2019-12-12T22:07:43.954136800Z [C 22:07:43.939 NotebookApp] received signal 15, stopping
+[36manaconda-python-3.7 |[0m 2019-12-12T22:07:43.954257900Z [I 22:07:43.940 NotebookApp] Shutting down 0 kernels
+[36manaconda-python-3.7 exited with code 0
+[0mAttaching to anaconda-python-3.7
+[36manaconda-python-3.7 |[0m 2019-12-12T22:07:50.895935500Z [I 22:07:50.895 NotebookApp] Writing notebook server cookie secret to /home/monty/.local/share/jupyter/runtime/notebook_cookie_secret
+[36manaconda-python-3.7 |[0m 2019-12-12T22:07:51.337033300Z [I 22:07:51.336 NotebookApp] JupyterLab extension loaded from /opt/conda/lib/python3.7/site-packages/jupyterlab
+[36manaconda-python-3.7 |[0m 2019-12-12T22:07:51.337103400Z [I 22:07:51.336 NotebookApp] JupyterLab application directory is /opt/conda/share/jupyter/lab
+[36manaconda-python-3.7 |[0m 2019-12-12T22:07:51.342201400Z [I 22:07:51.341 NotebookApp] Serving notebooks from local directory: /home/monty
+[36manaconda-python-3.7 |[0m 2019-12-12T22:07:51.342266600Z [I 22:07:51.341 NotebookApp] The Jupyter Notebook is running at:
+[36manaconda-python-3.7 |[0m 2019-12-12T22:07:51.342530500Z [I 22:07:51.341 NotebookApp] http://42836e90e340:3000/?token=64f0cc0aef5dccca8baae6c057e7d98c73f96e6f3f0135df
+[36manaconda-python-3.7 |[0m 2019-12-12T22:07:51.343498000Z [I 22:07:51.342 NotebookApp]  or http://127.0.0.1:3000/?token=64f0cc0aef5dccca8baae6c057e7d98c73f96e6f3f0135df
+[36manaconda-python-3.7 |[0m 2019-12-12T22:07:51.343808100Z [I 22:07:51.342 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[36manaconda-python-3.7 |[0m 2019-12-12T22:07:51.350090800Z [C 22:07:51.349 NotebookApp] 
+[36manaconda-python-3.7 |[0m 2019-12-12T22:07:51.350157800Z     
+[36manaconda-python-3.7 |[0m 2019-12-12T22:07:51.350191200Z     To access the notebook, open this file in a browser:
+[36manaconda-python-3.7 |[0m 2019-12-12T22:07:51.350223100Z         file:///home/monty/.local/share/jupyter/runtime/nbserver-6-open.html
+[36manaconda-python-3.7 |[0m 2019-12-12T22:07:51.350255100Z     Or copy and paste one of these URLs:
+[36manaconda-python-3.7 |[0m 2019-12-12T22:07:51.350286800Z         http://42836e90e340:3000/?token=64f0cc0aef5dccca8baae6c057e7d98c73f96e6f3f0135df
+[36manaconda-python-3.7 |[0m 2019-12-12T22:07:51.350328000Z      or http://127.0.0.1:3000/?token=64f0cc0aef5dccca8baae6c057e7d98c73f96e6f3f0135df
+[36manaconda-python-3.7 |[0m 2019-12-12T22:07:54.791843100Z [W 22:07:54.777 NotebookApp] Clearing invalid/expired login cookie username-127-0-0-1-3000
+[36manaconda-python-3.7 |[0m 2019-12-12T22:07:54.791932900Z [W 22:07:54.779 NotebookApp] Forbidden
+[36manaconda-python-3.7 |[0m 2019-12-12T22:07:54.795720700Z [W 22:07:54.792 NotebookApp] 403 GET /api/sessions?_=1576188429721 (192.168.112.1) 17.46ms referer=http://127.0.0.1:3000/tree
+[36manaconda-python-3.7 |[0m 2019-12-12T22:07:54.831774300Z [W 22:07:54.830 NotebookApp] Clearing invalid/expired login cookie username-127-0-0-1-3000
+[36manaconda-python-3.7 |[0m 2019-12-12T22:07:54.839469400Z [W 22:07:54.836 NotebookApp] Forbidden
+[36manaconda-python-3.7 |[0m 2019-12-12T22:07:54.839794100Z [W 22:07:54.838 NotebookApp] 403 GET /api/terminals?_=1576188429722 (192.168.112.1) 13.08ms referer=http://127.0.0.1:3000/tree
+[36manaconda-python-3.7 |[0m 2019-12-12T22:08:05.236353700Z [I 22:08:05.233 NotebookApp] 302 GET /?token=64f0cc0aef5dccca8baae6c057e7d98c73f96e6f3f0135df (192.168.112.1) 1.76ms
+[36manaconda-python-3.7 |[0m 2019-12-12T22:08:48.459795700Z [C 22:08:48.452 NotebookApp] received signal 15, stopping
+[36manaconda-python-3.7 |[0m 2019-12-12T22:08:48.459905200Z [I 22:08:48.453 NotebookApp] Shutting down 0 kernels
+[36manaconda-python-3.7 exited with code 0
+[0mAttaching to anaconda-python-3.7
+[36manaconda-python-3.7 |[0m 2019-12-12T22:08:56.389926900Z [I 22:08:56.389 NotebookApp] Writing notebook server cookie secret to /home/monty/.local/share/jupyter/runtime/notebook_cookie_secret
+[36manaconda-python-3.7 |[0m 2019-12-12T22:08:56.806224900Z [I 22:08:56.805 NotebookApp] JupyterLab extension loaded from /opt/conda/lib/python3.7/site-packages/jupyterlab
+[36manaconda-python-3.7 |[0m 2019-12-12T22:08:56.806515900Z [I 22:08:56.805 NotebookApp] JupyterLab application directory is /opt/conda/share/jupyter/lab
+[36manaconda-python-3.7 |[0m 2019-12-12T22:08:56.811543500Z [I 22:08:56.810 NotebookApp] Serving notebooks from local directory: /home/monty
+[36manaconda-python-3.7 |[0m 2019-12-12T22:08:56.811623900Z [I 22:08:56.811 NotebookApp] The Jupyter Notebook is running at:
+[36manaconda-python-3.7 |[0m 2019-12-12T22:08:56.812046100Z [I 22:08:56.811 NotebookApp] http://00036a976764:3000/?token=cf91779d9fcd1875f170d9cb71ebc1ea9442883f447d8e1d
+[36manaconda-python-3.7 |[0m 2019-12-12T22:08:56.813994900Z [I 22:08:56.812 NotebookApp]  or http://127.0.0.1:3000/?token=cf91779d9fcd1875f170d9cb71ebc1ea9442883f447d8e1d
+[36manaconda-python-3.7 |[0m 2019-12-12T22:08:56.814080100Z [I 22:08:56.813 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[36manaconda-python-3.7 |[0m 2019-12-12T22:08:56.821960200Z [C 22:08:56.821 NotebookApp] 
+[36manaconda-python-3.7 |[0m 2019-12-12T22:08:56.822079400Z     
+[36manaconda-python-3.7 |[0m 2019-12-12T22:08:56.822115500Z     To access the notebook, open this file in a browser:
+[36manaconda-python-3.7 |[0m 2019-12-12T22:08:56.822150100Z         file:///home/monty/.local/share/jupyter/runtime/nbserver-6-open.html
+[36manaconda-python-3.7 |[0m 2019-12-12T22:08:56.822184800Z     Or copy and paste one of these URLs:
+[36manaconda-python-3.7 |[0m 2019-12-12T22:08:56.822219000Z         http://00036a976764:3000/?token=cf91779d9fcd1875f170d9cb71ebc1ea9442883f447d8e1d
+[36manaconda-python-3.7 |[0m 2019-12-12T22:08:56.822261800Z      or http://127.0.0.1:3000/?token=cf91779d9fcd1875f170d9cb71ebc1ea9442883f447d8e1d
+[36manaconda-python-3.7 |[0m 2019-12-12T22:08:57.435430900Z [W 22:08:57.434 NotebookApp] Clearing invalid/expired login cookie username-127-0-0-1-3000
+[36manaconda-python-3.7 |[0m 2019-12-12T22:08:57.439753200Z [W 22:08:57.439 NotebookApp] Clearing invalid/expired login cookie username-127-0-0-1-3000
+[36manaconda-python-3.7 |[0m 2019-12-12T22:08:57.442644300Z [W 22:08:57.442 NotebookApp] Forbidden
+[36manaconda-python-3.7 |[0m 2019-12-12T22:08:57.445607400Z [W 22:08:57.444 NotebookApp] 403 GET /api/sessions?_=1576188485880 (192.168.128.1) 11.31ms referer=http://127.0.0.1:3000/tree/src
+[36manaconda-python-3.7 |[0m 2019-12-12T22:08:57.448835900Z [W 22:08:57.448 NotebookApp] Forbidden
+[36manaconda-python-3.7 |[0m 2019-12-12T22:08:57.460356900Z [W 22:08:57.459 NotebookApp] 403 GET /api/terminals?_=1576188485881 (192.168.128.1) 21.05ms referer=http://127.0.0.1:3000/tree/src
+[36manaconda-python-3.7 |[0m 2019-12-12T22:08:58.926884800Z [I 22:08:58.924 NotebookApp] 302 GET /tree/src (192.168.128.1) 1.82ms
+[36manaconda-python-3.7 |[0m 2019-12-12T22:09:27.629251200Z [I 22:09:27.627 NotebookApp] 302 GET /?token=cf91779d9fcd1875f170d9cb71ebc1ea9442883f447d8e1d (192.168.128.1) 1.45ms
+[36manaconda-python-3.7 |[0m 2019-12-12T22:10:25.185614400Z [C 22:10:25.175 NotebookApp] received signal 15, stopping
+[36manaconda-python-3.7 |[0m 2019-12-12T22:10:25.185750900Z [I 22:10:25.176 NotebookApp] Shutting down 0 kernels
+[36manaconda-python-3.7 exited with code 0
+[0mAttaching to anaconda-python-3.7
+[36manaconda-python-3.7 |[0m 2019-12-12T22:10:31.591503800Z [I 22:10:31.590 NotebookApp] Writing notebook server cookie secret to /home/monty/.local/share/jupyter/runtime/notebook_cookie_secret
+[36manaconda-python-3.7 |[0m 2019-12-12T22:10:31.991901900Z [I 22:10:31.991 NotebookApp] JupyterLab extension loaded from /opt/conda/lib/python3.7/site-packages/jupyterlab
+[36manaconda-python-3.7 |[0m 2019-12-12T22:10:31.991970400Z [I 22:10:31.991 NotebookApp] JupyterLab application directory is /opt/conda/share/jupyter/lab
+[36manaconda-python-3.7 |[0m 2019-12-12T22:10:31.996073300Z [I 22:10:31.995 NotebookApp] Serving notebooks from local directory: /home/monty
+[36manaconda-python-3.7 |[0m 2019-12-12T22:10:31.996282900Z [I 22:10:31.995 NotebookApp] The Jupyter Notebook is running at:
+[36manaconda-python-3.7 |[0m 2019-12-12T22:10:31.996325600Z [I 22:10:31.995 NotebookApp] http://57cc4270ed6c:3000/?token=31886a5de4042c7e280daa3eaad608e9a351c48751a48233
+[36manaconda-python-3.7 |[0m 2019-12-12T22:10:31.996652900Z [I 22:10:31.995 NotebookApp]  or http://127.0.0.1:3000/?token=31886a5de4042c7e280daa3eaad608e9a351c48751a48233
+[36manaconda-python-3.7 |[0m 2019-12-12T22:10:31.996776600Z [I 22:10:31.996 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[36manaconda-python-3.7 |[0m 2019-12-12T22:10:32.004534300Z [C 22:10:32.003 NotebookApp] 
+[36manaconda-python-3.7 |[0m 2019-12-12T22:10:32.004610100Z     
+[36manaconda-python-3.7 |[0m 2019-12-12T22:10:32.004651600Z     To access the notebook, open this file in a browser:
+[36manaconda-python-3.7 |[0m 2019-12-12T22:10:32.004685800Z         file:///home/monty/.local/share/jupyter/runtime/nbserver-6-open.html
+[36manaconda-python-3.7 |[0m 2019-12-12T22:10:32.004720300Z     Or copy and paste one of these URLs:
+[36manaconda-python-3.7 |[0m 2019-12-12T22:10:32.004754500Z         http://57cc4270ed6c:3000/?token=31886a5de4042c7e280daa3eaad608e9a351c48751a48233
+[36manaconda-python-3.7 |[0m 2019-12-12T22:10:32.004788700Z      or http://127.0.0.1:3000/?token=31886a5de4042c7e280daa3eaad608e9a351c48751a48233
+[36manaconda-python-3.7 |[0m 2019-12-12T22:10:32.340835000Z [W 22:10:32.338 NotebookApp] Clearing invalid/expired login cookie username-127-0-0-1-3000
+[36manaconda-python-3.7 |[0m 2019-12-12T22:10:32.343664100Z [W 22:10:32.343 NotebookApp] Clearing invalid/expired login cookie username-127-0-0-1-3000
+[36manaconda-python-3.7 |[0m 2019-12-12T22:10:32.346161300Z [W 22:10:32.345 NotebookApp] Forbidden
+[36manaconda-python-3.7 |[0m 2019-12-12T22:10:32.349067000Z [W 22:10:32.348 NotebookApp] 403 GET /api/sessions?_=1576188568263 (192.168.144.1) 10.69ms referer=http://127.0.0.1:3000/tree/src/app
+[36manaconda-python-3.7 |[0m 2019-12-12T22:10:32.355550000Z [W 22:10:32.351 NotebookApp] Forbidden
+[36manaconda-python-3.7 |[0m 2019-12-12T22:10:32.360793700Z [W 22:10:32.358 NotebookApp] 403 GET /api/terminals?_=1576188568264 (192.168.144.1) 14.58ms referer=http://127.0.0.1:3000/tree/src/app
+[36manaconda-python-3.7 |[0m 2019-12-12T22:10:37.804046500Z [I 22:10:37.801 NotebookApp] 302 GET /?token=31886a5de4042c7e280daa3eaad608e9a351c48751a48233 (192.168.144.1) 1.40ms

@@ -29,8 +29,15 @@ RUN apt-get install -y curl grep sed dpkg && \
     rm tini.deb && \
     apt-get clean
 
+RUN useradd -ms /bin/bash monty
+USER monty
+WORKDIR /home/monty
+
 ENTRYPOINT [ "/usr/bin/tini", "--" ]
-CMD [ "/bin/bash" ]
+
+# CMD [ "jupyter", "notebook", "--ip=0.0.0.0", "--port=3000", "--no-browser", "--notebook-dir=/usr/src/", "--allow-root"]
+CMD [ "jupyter", "notebook", "--ip=0.0.0.0", "--port=3000", "--no-browser", "--notebook-dir=/home/monty/"]
 
 # docker run --name test -it anaconda
-# The command above will run an interactive terminal in the container
+# docker exec -it <container name> /bin/bash
+# The commands above will run an interactive terminal in the container

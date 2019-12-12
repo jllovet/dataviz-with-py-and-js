@@ -2,3 +2,4 @@ notes*
 experiments/.env
 exercises/.env
 project/.env
+*logs/*
