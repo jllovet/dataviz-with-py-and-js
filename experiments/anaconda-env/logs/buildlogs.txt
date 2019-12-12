@@ -1,1525 +1,0 @@
-Creating network "anaconda-env_default" with the default driver
-Building anaconda
-Step 1/8 : FROM debian:latest
-latest: Pulling from library/debian
-Digest: sha256:79f0b1682af1a6a29ff63182c8103027f4de98b22d8fb50040e9c4bb13e3de78
-Status: Downloaded newer image for debian:latest
- ---> 67e34c1c9477
-Step 2/8 : ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
- ---> Running in 3e927e326619
-Removing intermediate container 3e927e326619
- ---> 73021ce7352f
-Step 3/8 : ENV PATH /opt/conda/bin:$PATH
- ---> Running in 41f7fa32ea47
-Removing intermediate container 41f7fa32ea47
- ---> a32f8369486e
-Step 4/8 : RUN apt-get update --fix-missing && apt-get install -y wget bzip2 ca-certificates     libglib2.0-0 libxext6 libsm6 libxrender1     git mercurial subversion
- ---> Running in d98596e01441
-Get:1 http://security-cdn.debian.org/debian-security buster/updates InRelease [65.4 kB]
-Get:2 http://cdn-fastly.deb.debian.org/debian buster InRelease [122 kB]
-Get:3 http://cdn-fastly.deb.debian.org/debian buster-updates InRelease [49.3 kB]
-Get:4 http://security-cdn.debian.org/debian-security buster/updates/main amd64 Packages [161 kB]
-Get:5 http://cdn-fastly.deb.debian.org/debian buster/main amd64 Packages [7908 kB]
-Get:6 http://cdn-fastly.deb.debian.org/debian buster-updates/main amd64 Packages [5792 B]
-Fetched 8311 kB in 3s (2622 kB/s)
-Reading package lists...
-Reading package lists...
-Building dependency tree...
-Reading state information...
-The following additional packages will be installed:
-  file git-man krb5-locales less libapr1 libaprutil1 libbsd0 libcurl3-gnutls
-  libedit2 liberror-perl libexpat1 libgdbm-compat4 libgdbm6 libglib2.0-data
-  libgssapi-krb5-2 libice6 libicu63 libk5crypto3 libkeyutils1 libkrb5-3
-  libkrb5support0 libldap-2.4-2 libldap-common libmagic-mgc libmagic1
-  libnghttp2-14 libpcre2-8-0 libperl5.28 libpsl5 libpython-stdlib
-  libpython2-stdlib libpython2.7-minimal libpython2.7-stdlib libreadline7
-  librtmp1 libsasl2-2 libsasl2-modules libsasl2-modules-db libserf-1-1
-  libsqlite3-0 libssh2-1 libssl1.1 libsvn1 libutf8proc2 libx11-6 libx11-data
-  libxau6 libxcb1 libxdmcp6 libxml2 libxmuu1 lsb-base mercurial-common
-  mime-support netbase openssh-client openssl patch perl perl-modules-5.28
-  publicsuffix python python-minimal python2 python2-minimal python2.7
-  python2.7-minimal readline-common sensible-utils shared-mime-info ucf
-  x11-common xauth xdg-user-dirs xz-utils
-Suggested packages:
-  bzip2-doc gettext-base git-daemon-run | git-daemon-sysvinit git-doc git-el
-  git-email git-gui gitk gitweb git-cvs git-mediawiki git-svn gdbm-l10n
-  krb5-doc krb5-user libsasl2-modules-gssapi-mit
-  | libsasl2-modules-gssapi-heimdal libsasl2-modules-ldap libsasl2-modules-otp
-  libsasl2-modules-sql kdiff3 | kdiff3-qt | kompare | meld | tkcvs | mgdiff
-  qct python-mysqldb python-openssl python-pygments wish keychain libpam-ssh
-  monkeysphere ssh-askpass ed diffutils-doc perl-doc libterm-readline-gnu-perl
-  | libterm-readline-perl-perl make libb-debug-perl liblocale-codes-perl
-  python-doc python-tk python2-doc python2.7-doc binutils binfmt-support
-  readline-doc db5.3-util libapache2-mod-svn subversion-tools
-The following NEW packages will be installed:
-  bzip2 ca-certificates file git git-man krb5-locales less libapr1 libaprutil1
-  libbsd0 libcurl3-gnutls libedit2 liberror-perl libexpat1 libgdbm-compat4
-  libgdbm6 libglib2.0-0 libglib2.0-data libgssapi-krb5-2 libice6 libicu63
-  libk5crypto3 libkeyutils1 libkrb5-3 libkrb5support0 libldap-2.4-2
-  libldap-common libmagic-mgc libmagic1 libnghttp2-14 libpcre2-8-0 libperl5.28
-  libpsl5 libpython-stdlib libpython2-stdlib libpython2.7-minimal
-  libpython2.7-stdlib libreadline7 librtmp1 libsasl2-2 libsasl2-modules
-  libsasl2-modules-db libserf-1-1 libsm6 libsqlite3-0 libssh2-1 libssl1.1
-  libsvn1 libutf8proc2 libx11-6 libx11-data libxau6 libxcb1 libxdmcp6 libxext6
-  libxml2 libxmuu1 libxrender1 lsb-base mercurial mercurial-common
-  mime-support netbase openssh-client openssl patch perl perl-modules-5.28
-  publicsuffix python python-minimal python2 python2-minimal python2.7
-  python2.7-minimal readline-common sensible-utils shared-mime-info subversion
-  ucf wget x11-common xauth xdg-user-dirs xz-utils
-0 upgraded, 85 newly installed, 0 to remove and 0 not upgraded.
-Need to get 46.8 MB of archives.
-After this operation, 212 MB of additional disk space will be used.
-Get:1 http://security-cdn.debian.org/debian-security buster/updates/main amd64 git-man all 1:2.20.1-2+deb10u1 [1620 kB]
-Get:3 http://cdn-fastly.deb.debian.org/debian buster/main amd64 perl-modules-5.28 all 5.28.1-6 [2873 kB]
-Get:2 http://security-cdn.debian.org/debian-security buster/updates/main amd64 git amd64 1:2.20.1-2+deb10u1 [5620 kB]
-Get:4 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libgdbm6 amd64 1.18.1-4 [64.7 kB]
-Get:5 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libgdbm-compat4 amd64 1.18.1-4 [44.1 kB]
-Get:6 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libperl5.28 amd64 5.28.1-6 [3883 kB]
-Get:7 http://cdn-fastly.deb.debian.org/debian buster/main amd64 perl amd64 5.28.1-6 [204 kB]
-Get:8 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libpython2.7-minimal amd64 2.7.16-2+deb10u1 [395 kB]
-Get:9 http://cdn-fastly.deb.debian.org/debian buster/main amd64 python2.7-minimal amd64 2.7.16-2+deb10u1 [1369 kB]
-Get:10 http://cdn-fastly.deb.debian.org/debian buster/main amd64 python2-minimal amd64 2.7.16-1 [41.4 kB]
-Get:11 http://cdn-fastly.deb.debian.org/debian buster/main amd64 python-minimal amd64 2.7.16-1 [21.0 kB]
-Get:12 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libssl1.1 amd64 1.1.1d-0+deb10u2 [1538 kB]
-Get:13 http://cdn-fastly.deb.debian.org/debian buster/main amd64 mime-support all 3.62 [37.2 kB]
-Get:14 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libexpat1 amd64 2.2.6-2+deb10u1 [106 kB]
-Get:15 http://cdn-fastly.deb.debian.org/debian buster/main amd64 readline-common all 7.0-5 [70.6 kB]
-Get:16 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libreadline7 amd64 7.0-5 [151 kB]
-Get:17 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libsqlite3-0 amd64 3.27.2-3 [641 kB]
-Get:18 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libpython2.7-stdlib amd64 2.7.16-2+deb10u1 [1912 kB]
-Get:19 http://cdn-fastly.deb.debian.org/debian buster/main amd64 python2.7 amd64 2.7.16-2+deb10u1 [305 kB]
-Get:20 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libpython2-stdlib amd64 2.7.16-1 [20.8 kB]
-Get:21 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libpython-stdlib amd64 2.7.16-1 [20.8 kB]
-Get:22 http://cdn-fastly.deb.debian.org/debian buster/main amd64 python2 amd64 2.7.16-1 [41.6 kB]
-Get:23 http://cdn-fastly.deb.debian.org/debian buster/main amd64 python amd64 2.7.16-1 [22.8 kB]
-Get:24 http://cdn-fastly.deb.debian.org/debian buster/main amd64 less amd64 487-0.1+b1 [129 kB]
-Get:25 http://cdn-fastly.deb.debian.org/debian buster/main amd64 netbase all 5.6 [19.4 kB]
-Get:26 http://cdn-fastly.deb.debian.org/debian buster/main amd64 sensible-utils all 0.0.12 [15.8 kB]
-Get:27 http://cdn-fastly.deb.debian.org/debian buster/main amd64 bzip2 amd64 1.0.6-9.2~deb10u1 [48.4 kB]
-Get:28 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libmagic-mgc amd64 1:5.35-4+deb10u1 [242 kB]
-Get:29 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libmagic1 amd64 1:5.35-4+deb10u1 [117 kB]
-Get:30 http://cdn-fastly.deb.debian.org/debian buster/main amd64 file amd64 1:5.35-4+deb10u1 [66.4 kB]
-Get:31 http://cdn-fastly.deb.debian.org/debian buster/main amd64 krb5-locales all 1.17-3 [95.4 kB]
-Get:32 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libbsd0 amd64 0.9.1-2 [99.5 kB]
-Get:33 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libedit2 amd64 3.1-20181209-1 [94.0 kB]
-Get:34 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libkeyutils1 amd64 1.6-6 [15.0 kB]
-Get:35 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libkrb5support0 amd64 1.17-3 [65.6 kB]
-Get:36 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libk5crypto3 amd64 1.17-3 [121 kB]
-Get:37 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libkrb5-3 amd64 1.17-3 [370 kB]
-Get:38 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libgssapi-krb5-2 amd64 1.17-3 [158 kB]
-Get:39 http://cdn-fastly.deb.debian.org/debian buster/main amd64 openssh-client amd64 1:7.9p1-10+deb10u1 [782 kB]
-Get:40 http://cdn-fastly.deb.debian.org/debian buster/main amd64 ucf all 3.0038+nmu1 [69.0 kB]
-Get:41 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libpcre2-8-0 amd64 10.32-5 [213 kB]
-Get:42 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libpsl5 amd64 0.20.2-2 [53.7 kB]
-Get:43 http://cdn-fastly.deb.debian.org/debian buster/main amd64 wget amd64 1.20.1-1.1 [902 kB]
-Get:44 http://cdn-fastly.deb.debian.org/debian buster/main amd64 xz-utils amd64 5.2.4-1 [183 kB]
-Get:45 http://cdn-fastly.deb.debian.org/debian buster/main amd64 openssl amd64 1.1.1d-0+deb10u2 [843 kB]
-Get:46 http://cdn-fastly.deb.debian.org/debian buster/main amd64 ca-certificates all 20190110 [157 kB]
-Get:47 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libsasl2-modules-db amd64 2.1.27+dfsg-1 [69.0 kB]
-Get:48 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libsasl2-2 amd64 2.1.27+dfsg-1 [106 kB]
-Get:49 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libldap-common all 2.4.47+dfsg-3+deb10u1 [89.6 kB]
-Get:50 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libldap-2.4-2 amd64 2.4.47+dfsg-3+deb10u1 [225 kB]
-Get:51 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libnghttp2-14 amd64 1.36.0-2+deb10u1 [85.0 kB]
-Get:52 http://cdn-fastly.deb.debian.org/debian buster/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2 [60.5 kB]
-Get:53 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libssh2-1 amd64 1.8.0-2.1 [140 kB]
-Get:54 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libcurl3-gnutls amd64 7.64.0-4 [329 kB]
-Get:55 http://cdn-fastly.deb.debian.org/debian buster/main amd64 liberror-perl all 0.17027-2 [30.9 kB]
-Get:56 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libapr1 amd64 1.6.5-1+b1 [102 kB]
-Get:57 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libaprutil1 amd64 1.6.1-4 [91.8 kB]
-Get:58 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libglib2.0-0 amd64 2.58.3-2+deb10u2 [1258 kB]
-Get:59 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libglib2.0-data all 2.58.3-2+deb10u2 [1110 kB]
-Get:60 http://cdn-fastly.deb.debian.org/debian buster/main amd64 lsb-base all 10.2019051400 [28.4 kB]
-Get:61 http://cdn-fastly.deb.debian.org/debian buster/main amd64 x11-common all 1:7.7+19 [251 kB]
-Get:62 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libice6 amd64 2:1.0.9-2 [58.7 kB]
-Get:63 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libicu63 amd64 63.1-6 [8292 kB]
-Get:64 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libsasl2-modules amd64 2.1.27+dfsg-1 [104 kB]
-Get:65 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libserf-1-1 amd64 1.3.9-7+b10 [53.6 kB]
-Get:66 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libsm6 amd64 2:1.2.3-1 [35.1 kB]
-Get:67 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libutf8proc2 amd64 2.3.0-1 [53.0 kB]
-Get:68 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libsvn1 amd64 1.10.4-1+deb10u1 [1402 kB]
-Get:69 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libxau6 amd64 1:1.0.8-1+b2 [19.9 kB]
-Get:70 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libxdmcp6 amd64 1:1.1.2-3 [26.3 kB]
-Get:71 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libxcb1 amd64 1.13.1-2 [137 kB]
-Get:72 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libx11-data all 2:1.6.7-1 [298 kB]
-Get:73 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libx11-6 amd64 2:1.6.7-1 [754 kB]
-Get:74 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libxext6 amd64 2:1.3.3-1+b2 [52.5 kB]
-Get:75 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libxml2 amd64 2.9.4+dfsg1-7+b3 [687 kB]
-Get:76 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libxmuu1 amd64 2:1.1.2-2+b3 [23.9 kB]
-Get:77 http://cdn-fastly.deb.debian.org/debian buster/main amd64 libxrender1 amd64 1:0.9.10-1 [33.0 kB]
-Get:78 http://cdn-fastly.deb.debian.org/debian buster/main amd64 mercurial-common all 4.8.2-1+deb10u1 [2523 kB]
-Get:79 http://cdn-fastly.deb.debian.org/debian buster/main amd64 mercurial amd64 4.8.2-1+deb10u1 [307 kB]
-Get:80 http://cdn-fastly.deb.debian.org/debian buster/main amd64 patch amd64 2.7.6-3+deb10u1 [126 kB]
-Get:81 http://cdn-fastly.deb.debian.org/debian buster/main amd64 publicsuffix all 20190415.1030-1 [116 kB]
-Get:82 http://cdn-fastly.deb.debian.org/debian buster/main amd64 shared-mime-info amd64 1.10-1 [766 kB]
-Get:83 http://cdn-fastly.deb.debian.org/debian buster/main amd64 subversion amd64 1.10.4-1+deb10u1 [1008 kB]
-Get:84 http://cdn-fastly.deb.debian.org/debian buster/main amd64 xauth amd64 1:1.0.10-1 [40.3 kB]
-Get:85 http://cdn-fastly.deb.debian.org/debian buster/main amd64 xdg-user-dirs amd64 0.17-2 [53.8 kB]
-[91mdebconf: delaying package configuration, since apt-utils is not installed
-[0mFetched 46.8 MB in 4s (11.8 MB/s)
-Selecting previously unselected package perl-modules-5.28.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 6674 files and directories currently installed.)
-Preparing to unpack .../00-perl-modules-5.28_5.28.1-6_all.deb ...
-Unpacking perl-modules-5.28 (5.28.1-6) ...
-Selecting previously unselected package libgdbm6:amd64.
-Preparing to unpack .../01-libgdbm6_1.18.1-4_amd64.deb ...
-Unpacking libgdbm6:amd64 (1.18.1-4) ...
-Selecting previously unselected package libgdbm-compat4:amd64.
-Preparing to unpack .../02-libgdbm-compat4_1.18.1-4_amd64.deb ...
-Unpacking libgdbm-compat4:amd64 (1.18.1-4) ...
-Selecting previously unselected package libperl5.28:amd64.
-Preparing to unpack .../03-libperl5.28_5.28.1-6_amd64.deb ...
-Unpacking libperl5.28:amd64 (5.28.1-6) ...
-Selecting previously unselected package perl.
-Preparing to unpack .../04-perl_5.28.1-6_amd64.deb ...
-Unpacking perl (5.28.1-6) ...
-Selecting previously unselected package libpython2.7-minimal:amd64.
-Preparing to unpack .../05-libpython2.7-minimal_2.7.16-2+deb10u1_amd64.deb ...
-Unpacking libpython2.7-minimal:amd64 (2.7.16-2+deb10u1) ...
-Selecting previously unselected package python2.7-minimal.
-Preparing to unpack .../06-python2.7-minimal_2.7.16-2+deb10u1_amd64.deb ...
-Unpacking python2.7-minimal (2.7.16-2+deb10u1) ...
-Selecting previously unselected package python2-minimal.
-Preparing to unpack .../07-python2-minimal_2.7.16-1_amd64.deb ...
-Unpacking python2-minimal (2.7.16-1) ...
-Selecting previously unselected package python-minimal.
-Preparing to unpack .../08-python-minimal_2.7.16-1_amd64.deb ...
-Unpacking python-minimal (2.7.16-1) ...
-Selecting previously unselected package libssl1.1:amd64.
-Preparing to unpack .../09-libssl1.1_1.1.1d-0+deb10u2_amd64.deb ...
-Unpacking libssl1.1:amd64 (1.1.1d-0+deb10u2) ...
-Selecting previously unselected package mime-support.
-Preparing to unpack .../10-mime-support_3.62_all.deb ...
-Unpacking mime-support (3.62) ...
-Selecting previously unselected package libexpat1:amd64.
-Preparing to unpack .../11-libexpat1_2.2.6-2+deb10u1_amd64.deb ...
-Unpacking libexpat1:amd64 (2.2.6-2+deb10u1) ...
-Selecting previously unselected package readline-common.
-Preparing to unpack .../12-readline-common_7.0-5_all.deb ...
-Unpacking readline-common (7.0-5) ...
-Selecting previously unselected package libreadline7:amd64.
-Preparing to unpack .../13-libreadline7_7.0-5_amd64.deb ...
-Unpacking libreadline7:amd64 (7.0-5) ...
-Selecting previously unselected package libsqlite3-0:amd64.
-Preparing to unpack .../14-libsqlite3-0_3.27.2-3_amd64.deb ...
-Unpacking libsqlite3-0:amd64 (3.27.2-3) ...
-Selecting previously unselected package libpython2.7-stdlib:amd64.
-Preparing to unpack .../15-libpython2.7-stdlib_2.7.16-2+deb10u1_amd64.deb ...
-Unpacking libpython2.7-stdlib:amd64 (2.7.16-2+deb10u1) ...
-Selecting previously unselected package python2.7.
-Preparing to unpack .../16-python2.7_2.7.16-2+deb10u1_amd64.deb ...
-Unpacking python2.7 (2.7.16-2+deb10u1) ...
-Selecting previously unselected package libpython2-stdlib:amd64.
-Preparing to unpack .../17-libpython2-stdlib_2.7.16-1_amd64.deb ...
-Unpacking libpython2-stdlib:amd64 (2.7.16-1) ...
-Selecting previously unselected package libpython-stdlib:amd64.
-Preparing to unpack .../18-libpython-stdlib_2.7.16-1_amd64.deb ...
-Unpacking libpython-stdlib:amd64 (2.7.16-1) ...
-Setting up libpython2.7-minimal:amd64 (2.7.16-2+deb10u1) ...
-Setting up python2.7-minimal (2.7.16-2+deb10u1) ...
-Linking and byte-compiling packages for runtime python2.7...
-Setting up python2-minimal (2.7.16-1) ...
-Selecting previously unselected package python2.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 9457 files and directories currently installed.)
-Preparing to unpack .../python2_2.7.16-1_amd64.deb ...
-Unpacking python2 (2.7.16-1) ...
-Setting up python-minimal (2.7.16-1) ...
-Selecting previously unselected package python.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 9490 files and directories currently installed.)
-Preparing to unpack .../00-python_2.7.16-1_amd64.deb ...
-Unpacking python (2.7.16-1) ...
-Selecting previously unselected package less.
-Preparing to unpack .../01-less_487-0.1+b1_amd64.deb ...
-Unpacking less (487-0.1+b1) ...
-Selecting previously unselected package netbase.
-Preparing to unpack .../02-netbase_5.6_all.deb ...
-Unpacking netbase (5.6) ...
-Selecting previously unselected package sensible-utils.
-Preparing to unpack .../03-sensible-utils_0.0.12_all.deb ...
-Unpacking sensible-utils (0.0.12) ...
-Selecting previously unselected package bzip2.
-Preparing to unpack .../04-bzip2_1.0.6-9.2~deb10u1_amd64.deb ...
-Unpacking bzip2 (1.0.6-9.2~deb10u1) ...
-Selecting previously unselected package libmagic-mgc.
-Preparing to unpack .../05-libmagic-mgc_1%3a5.35-4+deb10u1_amd64.deb ...
-Unpacking libmagic-mgc (1:5.35-4+deb10u1) ...
-Selecting previously unselected package libmagic1:amd64.
-Preparing to unpack .../06-libmagic1_1%3a5.35-4+deb10u1_amd64.deb ...
-Unpacking libmagic1:amd64 (1:5.35-4+deb10u1) ...
-Selecting previously unselected package file.
-Preparing to unpack .../07-file_1%3a5.35-4+deb10u1_amd64.deb ...
-Unpacking file (1:5.35-4+deb10u1) ...
-Selecting previously unselected package krb5-locales.
-Preparing to unpack .../08-krb5-locales_1.17-3_all.deb ...
-Unpacking krb5-locales (1.17-3) ...
-Selecting previously unselected package libbsd0:amd64.
-Preparing to unpack .../09-libbsd0_0.9.1-2_amd64.deb ...
-Unpacking libbsd0:amd64 (0.9.1-2) ...
-Selecting previously unselected package libedit2:amd64.
-Preparing to unpack .../10-libedit2_3.1-20181209-1_amd64.deb ...
-Unpacking libedit2:amd64 (3.1-20181209-1) ...
-Selecting previously unselected package libkeyutils1:amd64.
-Preparing to unpack .../11-libkeyutils1_1.6-6_amd64.deb ...
-Unpacking libkeyutils1:amd64 (1.6-6) ...
-Selecting previously unselected package libkrb5support0:amd64.
-Preparing to unpack .../12-libkrb5support0_1.17-3_amd64.deb ...
-Unpacking libkrb5support0:amd64 (1.17-3) ...
-Selecting previously unselected package libk5crypto3:amd64.
-Preparing to unpack .../13-libk5crypto3_1.17-3_amd64.deb ...
-Unpacking libk5crypto3:amd64 (1.17-3) ...
-Selecting previously unselected package libkrb5-3:amd64.
-Preparing to unpack .../14-libkrb5-3_1.17-3_amd64.deb ...
-Unpacking libkrb5-3:amd64 (1.17-3) ...
-Selecting previously unselected package libgssapi-krb5-2:amd64.
-Preparing to unpack .../15-libgssapi-krb5-2_1.17-3_amd64.deb ...
-Unpacking libgssapi-krb5-2:amd64 (1.17-3) ...
-Selecting previously unselected package openssh-client.
-Preparing to unpack .../16-openssh-client_1%3a7.9p1-10+deb10u1_amd64.deb ...
-Unpacking openssh-client (1:7.9p1-10+deb10u1) ...
-Selecting previously unselected package ucf.
-Preparing to unpack .../17-ucf_3.0038+nmu1_all.deb ...
-Moving old data out of the way
-Unpacking ucf (3.0038+nmu1) ...
-Selecting previously unselected package libpcre2-8-0:amd64.
-Preparing to unpack .../18-libpcre2-8-0_10.32-5_amd64.deb ...
-Unpacking libpcre2-8-0:amd64 (10.32-5) ...
-Selecting previously unselected package libpsl5:amd64.
-Preparing to unpack .../19-libpsl5_0.20.2-2_amd64.deb ...
-Unpacking libpsl5:amd64 (0.20.2-2) ...
-Selecting previously unselected package wget.
-Preparing to unpack .../20-wget_1.20.1-1.1_amd64.deb ...
-Unpacking wget (1.20.1-1.1) ...
-Selecting previously unselected package xz-utils.
-Preparing to unpack .../21-xz-utils_5.2.4-1_amd64.deb ...
-Unpacking xz-utils (5.2.4-1) ...
-Selecting previously unselected package openssl.
-Preparing to unpack .../22-openssl_1.1.1d-0+deb10u2_amd64.deb ...
-Unpacking openssl (1.1.1d-0+deb10u2) ...
-Selecting previously unselected package ca-certificates.
-Preparing to unpack .../23-ca-certificates_20190110_all.deb ...
-Unpacking ca-certificates (20190110) ...
-Selecting previously unselected package libsasl2-modules-db:amd64.
-Preparing to unpack .../24-libsasl2-modules-db_2.1.27+dfsg-1_amd64.deb ...
-Unpacking libsasl2-modules-db:amd64 (2.1.27+dfsg-1) ...
-Selecting previously unselected package libsasl2-2:amd64.
-Preparing to unpack .../25-libsasl2-2_2.1.27+dfsg-1_amd64.deb ...
-Unpacking libsasl2-2:amd64 (2.1.27+dfsg-1) ...
-Selecting previously unselected package libldap-common.
-Preparing to unpack .../26-libldap-common_2.4.47+dfsg-3+deb10u1_all.deb ...
-Unpacking libldap-common (2.4.47+dfsg-3+deb10u1) ...
-Selecting previously unselected package libldap-2.4-2:amd64.
-Preparing to unpack .../27-libldap-2.4-2_2.4.47+dfsg-3+deb10u1_amd64.deb ...
-Unpacking libldap-2.4-2:amd64 (2.4.47+dfsg-3+deb10u1) ...
-Selecting previously unselected package libnghttp2-14:amd64.
-Preparing to unpack .../28-libnghttp2-14_1.36.0-2+deb10u1_amd64.deb ...
-Unpacking libnghttp2-14:amd64 (1.36.0-2+deb10u1) ...
-Selecting previously unselected package librtmp1:amd64.
-Preparing to unpack .../29-librtmp1_2.4+20151223.gitfa8646d.1-2_amd64.deb ...
-Unpacking librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2) ...
-Selecting previously unselected package libssh2-1:amd64.
-Preparing to unpack .../30-libssh2-1_1.8.0-2.1_amd64.deb ...
-Unpacking libssh2-1:amd64 (1.8.0-2.1) ...
-Selecting previously unselected package libcurl3-gnutls:amd64.
-Preparing to unpack .../31-libcurl3-gnutls_7.64.0-4_amd64.deb ...
-Unpacking libcurl3-gnutls:amd64 (7.64.0-4) ...
-Selecting previously unselected package liberror-perl.
-Preparing to unpack .../32-liberror-perl_0.17027-2_all.deb ...
-Unpacking liberror-perl (0.17027-2) ...
-Selecting previously unselected package git-man.
-Preparing to unpack .../33-git-man_1%3a2.20.1-2+deb10u1_all.deb ...
-Unpacking git-man (1:2.20.1-2+deb10u1) ...
-Selecting previously unselected package git.
-Preparing to unpack .../34-git_1%3a2.20.1-2+deb10u1_amd64.deb ...
-Unpacking git (1:2.20.1-2+deb10u1) ...
-Selecting previously unselected package libapr1:amd64.
-Preparing to unpack .../35-libapr1_1.6.5-1+b1_amd64.deb ...
-Unpacking libapr1:amd64 (1.6.5-1+b1) ...
-Selecting previously unselected package libaprutil1:amd64.
-Preparing to unpack .../36-libaprutil1_1.6.1-4_amd64.deb ...
-Unpacking libaprutil1:amd64 (1.6.1-4) ...
-Selecting previously unselected package libglib2.0-0:amd64.
-Preparing to unpack .../37-libglib2.0-0_2.58.3-2+deb10u2_amd64.deb ...
-Unpacking libglib2.0-0:amd64 (2.58.3-2+deb10u2) ...
-Selecting previously unselected package libglib2.0-data.
-Preparing to unpack .../38-libglib2.0-data_2.58.3-2+deb10u2_all.deb ...
-Unpacking libglib2.0-data (2.58.3-2+deb10u2) ...
-Selecting previously unselected package lsb-base.
-Preparing to unpack .../39-lsb-base_10.2019051400_all.deb ...
-Unpacking lsb-base (10.2019051400) ...
-Selecting previously unselected package x11-common.
-Preparing to unpack .../40-x11-common_1%3a7.7+19_all.deb ...
-Unpacking x11-common (1:7.7+19) ...
-Selecting previously unselected package libice6:amd64.
-Preparing to unpack .../41-libice6_2%3a1.0.9-2_amd64.deb ...
-Unpacking libice6:amd64 (2:1.0.9-2) ...
-Selecting previously unselected package libicu63:amd64.
-Preparing to unpack .../42-libicu63_63.1-6_amd64.deb ...
-Unpacking libicu63:amd64 (63.1-6) ...
-Selecting previously unselected package libsasl2-modules:amd64.
-Preparing to unpack .../43-libsasl2-modules_2.1.27+dfsg-1_amd64.deb ...
-Unpacking libsasl2-modules:amd64 (2.1.27+dfsg-1) ...
-Selecting previously unselected package libserf-1-1:amd64.
-Preparing to unpack .../44-libserf-1-1_1.3.9-7+b10_amd64.deb ...
-Unpacking libserf-1-1:amd64 (1.3.9-7+b10) ...
-Selecting previously unselected package libsm6:amd64.
-Preparing to unpack .../45-libsm6_2%3a1.2.3-1_amd64.deb ...
-Unpacking libsm6:amd64 (2:1.2.3-1) ...
-Selecting previously unselected package libutf8proc2:amd64.
-Preparing to unpack .../46-libutf8proc2_2.3.0-1_amd64.deb ...
-Unpacking libutf8proc2:amd64 (2.3.0-1) ...
-Selecting previously unselected package libsvn1:amd64.
-Preparing to unpack .../47-libsvn1_1.10.4-1+deb10u1_amd64.deb ...
-Unpacking libsvn1:amd64 (1.10.4-1+deb10u1) ...
-Selecting previously unselected package libxau6:amd64.
-Preparing to unpack .../48-libxau6_1%3a1.0.8-1+b2_amd64.deb ...
-Unpacking libxau6:amd64 (1:1.0.8-1+b2) ...
-Selecting previously unselected package libxdmcp6:amd64.
-Preparing to unpack .../49-libxdmcp6_1%3a1.1.2-3_amd64.deb ...
-Unpacking libxdmcp6:amd64 (1:1.1.2-3) ...
-Selecting previously unselected package libxcb1:amd64.
-Preparing to unpack .../50-libxcb1_1.13.1-2_amd64.deb ...
-Unpacking libxcb1:amd64 (1.13.1-2) ...
-Selecting previously unselected package libx11-data.
-Preparing to unpack .../51-libx11-data_2%3a1.6.7-1_all.deb ...
-Unpacking libx11-data (2:1.6.7-1) ...
-Selecting previously unselected package libx11-6:amd64.
-Preparing to unpack .../52-libx11-6_2%3a1.6.7-1_amd64.deb ...
-Unpacking libx11-6:amd64 (2:1.6.7-1) ...
-Selecting previously unselected package libxext6:amd64.
-Preparing to unpack .../53-libxext6_2%3a1.3.3-1+b2_amd64.deb ...
-Unpacking libxext6:amd64 (2:1.3.3-1+b2) ...
-Selecting previously unselected package libxml2:amd64.
-Preparing to unpack .../54-libxml2_2.9.4+dfsg1-7+b3_amd64.deb ...
-Unpacking libxml2:amd64 (2.9.4+dfsg1-7+b3) ...
-Selecting previously unselected package libxmuu1:amd64.
-Preparing to unpack .../55-libxmuu1_2%3a1.1.2-2+b3_amd64.deb ...
-Unpacking libxmuu1:amd64 (2:1.1.2-2+b3) ...
-Selecting previously unselected package libxrender1:amd64.
-Preparing to unpack .../56-libxrender1_1%3a0.9.10-1_amd64.deb ...
-Unpacking libxrender1:amd64 (1:0.9.10-1) ...
-Selecting previously unselected package mercurial-common.
-Preparing to unpack .../57-mercurial-common_4.8.2-1+deb10u1_all.deb ...
-Unpacking mercurial-common (4.8.2-1+deb10u1) ...
-Selecting previously unselected package mercurial.
-Preparing to unpack .../58-mercurial_4.8.2-1+deb10u1_amd64.deb ...
-Unpacking mercurial (4.8.2-1+deb10u1) ...
-Selecting previously unselected package patch.
-Preparing to unpack .../59-patch_2.7.6-3+deb10u1_amd64.deb ...
-Unpacking patch (2.7.6-3+deb10u1) ...
-Selecting previously unselected package publicsuffix.
-Preparing to unpack .../60-publicsuffix_20190415.1030-1_all.deb ...
-Unpacking publicsuffix (20190415.1030-1) ...
-Selecting previously unselected package shared-mime-info.
-Preparing to unpack .../61-shared-mime-info_1.10-1_amd64.deb ...
-Unpacking shared-mime-info (1.10-1) ...
-Selecting previously unselected package subversion.
-Preparing to unpack .../62-subversion_1.10.4-1+deb10u1_amd64.deb ...
-Unpacking subversion (1.10.4-1+deb10u1) ...
-Selecting previously unselected package xauth.
-Preparing to unpack .../63-xauth_1%3a1.0.10-1_amd64.deb ...
-Unpacking xauth (1:1.0.10-1) ...
-Selecting previously unselected package xdg-user-dirs.
-Preparing to unpack .../64-xdg-user-dirs_0.17-2_amd64.deb ...
-Unpacking xdg-user-dirs (0.17-2) ...
-Setting up perl-modules-5.28 (5.28.1-6) ...
-Setting up libexpat1:amd64 (2.2.6-2+deb10u1) ...
-Setting up lsb-base (10.2019051400) ...
-Setting up libxau6:amd64 (1:1.0.8-1+b2) ...
-Setting up libkeyutils1:amd64 (1.6-6) ...
-Setting up libpsl5:amd64 (0.20.2-2) ...
-Setting up mime-support (3.62) ...
-Setting up xdg-user-dirs (0.17-2) ...
-Setting up libmagic-mgc (1:5.35-4+deb10u1) ...
-Setting up libglib2.0-0:amd64 (2.58.3-2+deb10u2) ...
-No schema files found: doing nothing.
-Setting up libssl1.1:amd64 (1.1.1d-0+deb10u2) ...
-debconf: unable to initialize frontend: Dialog
-debconf: (TERM is not set, so the dialog frontend is not usable.)
-debconf: falling back to frontend: Readline
-Setting up libutf8proc2:amd64 (2.3.0-1) ...
-Setting up libsqlite3-0:amd64 (3.27.2-3) ...
-Setting up libsasl2-modules:amd64 (2.1.27+dfsg-1) ...
-Setting up x11-common (1:7.7+19) ...
-debconf: unable to initialize frontend: Dialog
-debconf: (TERM is not set, so the dialog frontend is not usable.)
-debconf: falling back to frontend: Readline
-update-rc.d: warning: start and stop actions are no longer supported; falling back to defaults
-invoke-rc.d: could not determine current runlevel
-invoke-rc.d: policy-rc.d denied execution of start.
-Setting up libnghttp2-14:amd64 (1.36.0-2+deb10u1) ...
-Setting up libmagic1:amd64 (1:5.35-4+deb10u1) ...
-Setting up libapr1:amd64 (1.6.5-1+b1) ...
-Setting up less (487-0.1+b1) ...
-debconf: unable to initialize frontend: Dialog
-debconf: (TERM is not set, so the dialog frontend is not usable.)
-debconf: falling back to frontend: Readline
-Setting up krb5-locales (1.17-3) ...
-Setting up file (1:5.35-4+deb10u1) ...
-Setting up bzip2 (1.0.6-9.2~deb10u1) ...
-Setting up libldap-common (2.4.47+dfsg-3+deb10u1) ...
-Setting up libicu63:amd64 (63.1-6) ...
-Setting up libkrb5support0:amd64 (1.17-3) ...
-Setting up libsasl2-modules-db:amd64 (2.1.27+dfsg-1) ...
-Setting up libglib2.0-data (2.58.3-2+deb10u2) ...
-Setting up libx11-data (2:1.6.7-1) ...
-Setting up librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2) ...
-Setting up xz-utils (5.2.4-1) ...
-update-alternatives: using /usr/bin/xz to provide /usr/bin/lzma (lzma) in auto mode
-Setting up patch (2.7.6-3+deb10u1) ...
-Setting up libpcre2-8-0:amd64 (10.32-5) ...
-Setting up libk5crypto3:amd64 (1.17-3) ...
-Setting up libsasl2-2:amd64 (2.1.27+dfsg-1) ...
-Setting up sensible-utils (0.0.12) ...
-Setting up git-man (1:2.20.1-2+deb10u1) ...
-Setting up libssh2-1:amd64 (1.8.0-2.1) ...
-Setting up netbase (5.6) ...
-Setting up libkrb5-3:amd64 (1.17-3) ...
-Setting up openssl (1.1.1d-0+deb10u2) ...
-Setting up libbsd0:amd64 (0.9.1-2) ...
-Setting up readline-common (7.0-5) ...
-Setting up publicsuffix (20190415.1030-1) ...
-Setting up libxml2:amd64 (2.9.4+dfsg1-7+b3) ...
-Setting up libreadline7:amd64 (7.0-5) ...
-Setting up libgdbm6:amd64 (1.18.1-4) ...
-Setting up libaprutil1:amd64 (1.6.1-4) ...
-Setting up libice6:amd64 (2:1.0.9-2) ...
-Setting up libxdmcp6:amd64 (1:1.1.2-3) ...
-Setting up libxcb1:amd64 (1.13.1-2) ...
-Setting up wget (1.20.1-1.1) ...
-Setting up libedit2:amd64 (3.1-20181209-1) ...
-Setting up libldap-2.4-2:amd64 (2.4.47+dfsg-3+deb10u1) ...
-Setting up libpython2.7-stdlib:amd64 (2.7.16-2+deb10u1) ...
-Setting up ca-certificates (20190110) ...
-debconf: unable to initialize frontend: Dialog
-debconf: (TERM is not set, so the dialog frontend is not usable.)
-debconf: falling back to frontend: Readline
-Updating certificates in /etc/ssl/certs...
-128 added, 0 removed; done.
-Setting up shared-mime-info (1.10-1) ...
-Setting up libgssapi-krb5-2:amd64 (1.17-3) ...
-Setting up libgdbm-compat4:amd64 (1.18.1-4) ...
-Setting up ucf (3.0038+nmu1) ...
-debconf: unable to initialize frontend: Dialog
-debconf: (TERM is not set, so the dialog frontend is not usable.)
-debconf: falling back to frontend: Readline
-Setting up libperl5.28:amd64 (5.28.1-6) ...
-Setting up libx11-6:amd64 (2:1.6.7-1) ...
-Setting up libsm6:amd64 (2:1.2.3-1) ...
-Setting up libxmuu1:amd64 (2:1.1.2-2+b3) ...
-Setting up python2.7 (2.7.16-2+deb10u1) ...
-Setting up libxrender1:amd64 (1:0.9.10-1) ...
-Setting up libpython2-stdlib:amd64 (2.7.16-1) ...
-Setting up openssh-client (1:7.9p1-10+deb10u1) ...
-Setting up libserf-1-1:amd64 (1.3.9-7+b10) ...
-Setting up libxext6:amd64 (2:1.3.3-1+b2) ...
-Setting up libcurl3-gnutls:amd64 (7.64.0-4) ...
-Setting up python2 (2.7.16-1) ...
-Setting up libpython-stdlib:amd64 (2.7.16-1) ...
-Setting up perl (5.28.1-6) ...
-Setting up xauth (1:1.0.10-1) ...
-Setting up libsvn1:amd64 (1.10.4-1+deb10u1) ...
-Setting up python (2.7.16-1) ...
-Setting up mercurial-common (4.8.2-1+deb10u1) ...
-Setting up subversion (1.10.4-1+deb10u1) ...
-Setting up liberror-perl (0.17027-2) ...
-Setting up git (1:2.20.1-2+deb10u1) ...
-Setting up mercurial (4.8.2-1+deb10u1) ...
-debconf: unable to initialize frontend: Dialog
-debconf: (TERM is not set, so the dialog frontend is not usable.)
-debconf: falling back to frontend: Readline
-
-Creating config file /etc/mercurial/hgrc.d/hgext.rc with new version
-Processing triggers for libc-bin (2.28-10) ...
-Processing triggers for ca-certificates (20190110) ...
-Updating certificates in /etc/ssl/certs...
-0 added, 0 removed; done.
-Running hooks in /etc/ca-certificates/update.d...
-done.
-Removing intermediate container d98596e01441
- ---> 08afce3cee4a
-Step 5/8 : RUN wget --quiet https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh -O ~/anaconda.sh &&     /bin/bash ~/anaconda.sh -b -p /opt/conda &&     rm ~/anaconda.sh &&     ln -s /opt/conda/etc/profile.d/conda.sh /etc/profile.d/conda.sh &&     echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc &&     echo "conda activate base" >> ~/.bashrc
- ---> Running in c50b37789ad1
-PREFIX=/opt/conda
-Unpacking payload ...
-[91m  0%|          | 0/291 [00:00<?, ?it/s][0m[91mExtracting : pycodestyle-2.5.0-py37_0.conda:   0%|          | 0/291 [00:00<?, ?it/s][0m[91mExtracting : locket-0.2.0-py37_1.conda:   0%|          | 1/291 [00:00<00:24, 11.93it/s][0m[91mExtracting : bzip2-1.0.8-h7b6447c_0.conda:   1%|          | 2/291 [00:00<00:12, 23.60it/s][0m[91mExtracting : wcwidth-0.1.7-py37_0.conda:   1%|          | 3/291 [00:00<00:08, 34.47it/s]  [0m[91mExtracting : future-0.17.1-py37_0.conda:   1%|▏         | 4/291 [00:00<00:10, 27.12it/s][0m[91mExtracting : future-0.17.1-py37_0.conda:   2%|▏         | 5/291 [00:00<00:08, 33.86it/s][0m[91mExtracting : secretstorage-3.1.1-py37_0.conda:   2%|▏         | 5/291 [00:00<00:08, 33.86it/s][0m[91mExtracting : ply-3.11-py37_0.conda:   2%|▏         | 6/291 [00:00<00:08, 33.86it/s]           [0m[91mExtracting : send2trash-1.5.0-py37_0.conda:   2%|▏         | 7/291 [00:00<00:08, 33.86it/s][0m[91mExtracting : pexpect-4.7.0-py37_0.conda:   3%|▎         | 8/291 [00:00<00:08, 33.86it/s]   Extracting : fribidi-1.0.5-h7b6447c_0.conda:   3%|▎         | 9/291 [00:00<00:08, 33.86it/s][0m[91mExtracting : pixman-0.38.0-h7b6447c_0.conda:   3%|▎         | 10/291 [00:00<00:08, 33.86it/s][0m[91mExtracting : markupsafe-1.1.1-py37h7b6447c_0.conda:   4%|▍         | 11/291 [00:00<00:08, 33.86it/s][0m[91mExtracting : nbformat-4.4.0-py37_0.conda:   4%|▍         | 12/291 [00:00<00:08, 33.86it/s]          [0m[91mExtracting : libuuid-1.0.3-h1bed415_2.conda:   4%|▍         | 13/291 [00:00<00:08, 33.86it/s][0m[91mExtracting : libffi-3.2.1-hd88cf55_4.conda:   5%|▍         | 14/291 [00:00<00:08, 33.86it/s] [0m[91mExtracting : jupyter-1.0.0-py37_7.conda:   5%|▌         | 15/291 [00:00<00:08, 33.86it/s]   [0m[91mExtracting : backports.shutil_get_terminal_size-1.0.0-py37_2.conda:   5%|▌         | 16/291 [00:00<00:08, 33.86it/s][0m[91mExtracting : singledispatch-3.4.0.3-py37_0.conda:   6%|▌         | 17/291 [00:00<00:08, 33.86it/s]                  [0m[91mExtracting : gstreamer-1.14.0-hb453b48_1.conda:   6%|▌         | 18/291 [00:00<00:08, 33.86it/s]  [0m[91mExtracting : gstreamer-1.14.0-hb453b48_1.conda:   7%|▋         | 19/291 [00:00<00:07, 37.81it/s][0m[91mExtracting : wrapt-1.11.2-py37h7b6447c_0.conda:   7%|▋         | 19/291 [00:00<00:07, 37.81it/s][0m[91mExtracting : libxcb-1.13-h1bed415_1.conda:   7%|▋         | 20/291 [00:00<00:07, 37.81it/s]     [0m[91mExtracting : hdf5-1.10.4-hb1b8bf9_0.conda:   7%|▋         | 21/291 [00:00<00:07, 37.81it/s][0m[91mExtracting : more-itertools-7.2.0-py37_0.conda:   8%|▊         | 22/291 [00:00<00:07, 37.81it/s][0m[91mExtracting : expat-2.2.6-he6710b0_0.conda:   8%|▊         | 23/291 [00:00<00:07, 37.81it/s]     [0m[91mExtracting : nltk-3.4.5-py37_0.conda:   8%|▊         | 24/291 [00:00<00:07, 37.81it/s]     [0m[91mExtracting : nltk-3.4.5-py37_0.conda:   9%|▊         | 25/291 [00:00<00:08, 31.82it/s][0m[91mExtracting : scipy-1.3.1-py37h7c811a0_0.conda:   9%|▊         | 25/291 [00:01<00:08, 31.82it/s][0m[91mExtracting : cycler-0.10.0-py37_0.conda:   9%|▉         | 26/291 [00:01<00:08, 31.82it/s]      [0m[91mExtracting : sortedcontainers-2.1.0-py37_0.conda:   9%|▉         | 27/291 [00:01<00:08, 31.82it/s][0m[91mExtracting : sortedcontainers-2.1.0-py37_0.conda:  10%|▉         | 28/291 [00:01<00:26,  9.91it/s][0m[91mExtracting : python-dateutil-2.8.0-py37_0.conda:  10%|▉         | 28/291 [00:01<00:26,  9.91it/s] [0m[91mExtracting : ipykernel-5.1.2-py37h39e3cac_0.conda:  10%|▉         | 29/291 [00:01<00:26,  9.91it/s][0m[91mExtracting : llvmlite-0.29.0-py37hd408876_0.conda:  10%|█         | 30/291 [00:01<00:26,  9.91it/s][0m[91mExtracting : mccabe-0.6.1-py37_1.conda:  11%|█         | 31/291 [00:01<00:26,  9.91it/s]           [0m[91mExtracting : scikit-learn-0.21.3-py37hd81dba3_0.conda:  11%|█         | 32/291 [00:01<00:26,  9.91it/s][0m[91mExtracting : scikit-learn-0.21.3-py37hd81dba3_0.conda:  11%|█▏        | 33/291 [00:01<00:23, 10.76it/s][0m[91mExtracting : sortedcollections-1.1.2-py37_0.conda:  11%|█▏        | 33/291 [00:01<00:23, 10.76it/s]    [0m[91mExtracting : curl-7.65.3-hbc83047_0.conda:  12%|█▏        | 34/291 [00:01<00:23, 10.76it/s]        [0m[91mExtracting : jedi-0.15.1-py37_0.conda:  12%|█▏        | 35/291 [00:01<00:23, 10.76it/s]    [0m[91mExtracting : libtool-2.4.6-h7b6447c_5.conda:  12%|█▏        | 36/291 [00:01<00:23, 10.76it/s][0m[91mExtracting : pywavelets-1.0.3-py37hdd07704_1.conda:  13%|█▎        | 37/291 [00:01<00:23, 10.76it/s][0m[91mExtracting : cytoolz-0.10.0-py37h7b6447c_0.conda:  13%|█▎        | 38/291 [00:01<00:23, 10.76it/s]  [0m[91mExtracting : pyflakes-2.1.1-py37_0.conda:  13%|█▎        | 39/291 [00:01<00:23, 10.76it/s]        [0m[91mExtracting : dbus-1.13.6-h746ee38_0.conda:  14%|█▎        | 40/291 [00:01<00:23, 10.76it/s][0m[91mExtracting : dbus-1.13.6-h746ee38_0.conda:  14%|█▍        | 41/291 [00:01<00:17, 14.44it/s][0m[91mExtracting : libgfortran-ng-7.3.0-hdf63c60_0.conda:  14%|█▍        | 41/291 [00:01<00:17, 14.44it/s][0m[91mExtracting : boto-2.49.0-py37_0.conda:  14%|█▍        | 42/291 [00:02<00:17, 14.44it/s]             [0m[91mExtracting : libxml2-2.9.9-hea5a465_1.conda:  15%|█▍        | 43/291 [00:02<00:17, 14.44it/s][0m[91mExtracting : tk-8.6.8-hbc83047_0.conda:  15%|█▌        | 44/291 [00:02<00:17, 14.44it/s]     [0m[91mExtracting : tk-8.6.8-hbc83047_0.conda:  15%|█▌        | 45/291 [00:02<00:16, 15.09it/s][0m[91mExtracting : mpmath-1.1.0-py37_0.conda:  15%|█▌        | 45/291 [00:02<00:16, 15.09it/s][0m[91mExtracting : entrypoints-0.3-py37_0.conda:  16%|█▌        | 46/291 [00:02<00:16, 15.09it/s][0m[91mExtracting : gevent-1.4.0-py37h7b6447c_0.conda:  16%|█▌        | 47/291 [00:02<00:16, 15.09it/s][0m[91mExtracting : gevent-1.4.0-py37h7b6447c_0.conda:  16%|█▋        | 48/291 [00:02<00:15, 15.52it/s][0m[91mExtracting : jpeg-9b-h024ee3a_2.conda:  16%|█▋        | 48/291 [00:02<00:15, 15.52it/s]         [0m[91mExtracting : glib-2.56.2-hd408876_0.conda:  17%|█▋        | 49/291 [00:02<00:15, 15.52it/s][0m[91mExtracting : wurlitzer-1.0.3-py37_0.conda:  17%|█▋        | 50/291 [00:02<00:15, 15.52it/s][0m[91mExtracting : wurlitzer-1.0.3-py37_0.conda:  18%|█▊        | 51/291 [00:02<00:25,  9.53it/s][0m[91mExtracting : widgetsnbextension-3.5.1-py37_0.conda:  18%|█▊        | 51/291 [00:02<00:25,  9.53it/s][0m[91mExtracting : cairo-1.14.12-h8948797_3.conda:  18%|█▊        | 52/291 [00:03<00:25,  9.53it/s]       [0m[91mExtracting : cairo-1.14.12-h8948797_3.conda:  18%|█▊        | 53/291 [00:03<00:29,  8.12it/s][0m[91mExtracting : pycosat-0.6.3-py37h14c3975_0.conda:  18%|█▊        | 53/291 [00:03<00:29,  8.12it/s][0m[91mExtracting : jupyterlab-1.1.4-pyhf63ae98_0.conda:  19%|█▊        | 54/291 [00:03<00:29,  8.12it/s][0m[91mExtracting : jupyterlab-1.1.4-pyhf63ae98_0.conda:  19%|█▉        | 55/291 [00:03<00:38,  6.11it/s]Extracting : intel-openmp-2019.4-243.conda:  19%|█▉        | 55/291 [00:03<00:38,  6.11it/s]      Extracting : libpng-1.6.37-hbc83047_0.conda:  19%|█▉        | 56/291 [00:03<00:38,  6.11it/s]Extracting : tbb-2019.4-hfd86e86_0.conda:  20%|█▉        | 57/291 [00:03<00:38,  6.11it/s]   Extracting : requests-2.22.0-py37_0.conda:  20%|█▉        | 58/291 [00:03<00:38,  6.11it/s][0m[91mExtracting : itsdangerous-1.1.0-py37_0.conda:  20%|██        | 59/291 [00:03<00:37,  6.11it/s][0m[91mExtracting : zstd-1.3.7-h0b5b093_0.conda:  21%|██        | 60/291 [00:03<00:37,  6.11it/s]    [0m[91mExtracting : mpc-1.1.0-h10f8cd9_1.conda:  21%|██        | 61/291 [00:03<00:37,  6.11it/s] Extracting : readline-7.0-h7b6447c_5.conda:  21%|██▏       | 62/291 [00:03<00:37,  6.11it/s][0m[91mExtracting : anaconda-client-1.7.2-py37_0.conda:  22%|██▏       | 63/291 [00:03<00:37,  6.11it/s][0m[91mExtracting : click-7.0-py37_0.conda:  22%|██▏       | 64/291 [00:03<00:37,  6.11it/s]            [0m[91mExtracting : spyder-3.3.6-py37_0.conda:  22%|██▏       | 65/291 [00:04<00:36,  6.11it/s][0m[91mExtracting : spyder-3.3.6-py37_0.conda:  23%|██▎       | 66/291 [00:04<00:27,  8.32it/s][0m[91mExtracting : libstdcxx-ng-9.1.0-hdf63c60_0.conda:  23%|██▎       | 66/291 [00:04<00:27,  8.32it/s][0m[91mExtracting : matplotlib-3.1.1-py37h5429711_0.conda:  23%|██▎       | 67/291 [00:04<00:26,  8.32it/s][0m[91mExtracting : pyzmq-18.1.0-py37he6710b0_0.conda:  23%|██▎       | 68/291 [00:04<00:26,  8.32it/s]    [0m[91mExtracting : pyzmq-18.1.0-py37he6710b0_0.conda:  24%|██▎       | 69/291 [00:04<00:26,  8.29it/s][0m[91mExtracting : python-libarchive-c-2.8-py37_13.conda:  24%|██▎       | 69/291 [00:04<00:26,  8.29it/s][0m[91mExtracting : colorama-0.4.1-py37_0.conda:  24%|██▍       | 70/291 [00:04<00:26,  8.29it/s]          [0m[91mExtracting : statsmodels-0.10.1-py37hdd07704_0.conda:  24%|██▍       | 71/291 [00:04<00:26,  8.29it/s][0m[91mExtracting : statsmodels-0.10.1-py37hdd07704_0.conda:  25%|██▍       | 72/291 [00:04<00:26,  8.30it/s][0m[91mExtracting : lzo-2.10-h49e0be7_2.conda:  25%|██▍       | 72/291 [00:04<00:26,  8.30it/s]              [0m[91mExtracting : atomicwrites-1.3.0-py37_1.conda:  25%|██▌       | 73/291 [00:04<00:26,  8.30it/s][0m[91mExtracting : pyyaml-5.1.2-py37h7b6447c_0.conda:  25%|██▌       | 74/291 [00:04<00:26,  8.30it/s][0m[91mExtracting : ipython-7.8.0-py37h39e3cac_0.conda:  26%|██▌       | 75/291 [00:04<00:26,  8.30it/s][0m[91mExtracting : patchelf-0.9-he6710b0_3.conda:  26%|██▌       | 76/291 [00:04<00:25,  8.30it/s]     [0m[91mExtracting : zlib-1.2.11-h7b6447c_3.conda:  26%|██▋       | 77/291 [00:04<00:25,  8.30it/s] [0m[91mExtracting : greenlet-0.4.15-py37h7b6447c_0.conda:  27%|██▋       | 78/291 [00:04<00:25,  8.30it/s][0m[91mExtracting : jsonschema-3.0.2-py37_0.conda:  27%|██▋       | 79/291 [00:04<00:25,  8.30it/s]       [0m[91mExtracting : keyring-18.0.0-py37_0.conda:  27%|██▋       | 80/291 [00:04<00:25,  8.30it/s]  [0m[91mExtracting : ptyprocess-0.6.0-py37_0.conda:  28%|██▊       | 81/291 [00:04<00:25,  8.30it/s][0m[91mExtracting : sympy-1.4-py37_0.conda:  28%|██▊       | 82/291 [00:05<00:25,  8.30it/s]       [0m[91mExtracting : sympy-1.4-py37_0.conda:  29%|██▊       | 83/291 [00:05<00:23,  8.88it/s][0m[91mExtracting : conda-build-3.18.9-py37_3.conda:  29%|██▊       | 83/291 [00:05<00:23,  8.88it/s][0m[91mExtracting : seaborn-0.9.0-py37_0.conda:  29%|██▉       | 84/291 [00:05<00:23,  8.88it/s]     [0m[91mExtracting : testpath-0.4.2-py37_0.conda:  29%|██▉       | 85/291 [00:05<00:23,  8.88it/s][0m[91mExtracting : _ipyw_jlab_nb_ext_conf-0.1.0-py37_0.conda:  30%|██▉       | 86/291 [00:05<00:23,  8.88it/s][0m[91mExtracting : backports.os-0.1.1-py37_0.conda:  30%|██▉       | 87/291 [00:05<00:22,  8.88it/s]          [0m[91mExtracting : zeromq-4.3.1-he6710b0_3.conda:  30%|███       | 88/291 [00:05<00:22,  8.88it/s]  [0m[91mExtracting : libedit-3.1.20181209-hc058e9b_0.conda:  31%|███       | 89/291 [00:05<00:22,  8.88it/s][0m[91mExtracting : liblief-0.9.0-h7725739_2.conda:  31%|███       | 90/291 [00:05<00:22,  8.88it/s]       [0m[91mExtracting : python-3.7.4-h265db76_1.conda:  31%|███▏      | 91/291 [00:06<00:22,  8.88it/s] [0m[91mExtracting : python-3.7.4-h265db76_1.conda:  32%|███▏      | 92/291 [00:06<00:21,  9.47it/s][0m[91mExtracting : mpfr-4.0.1-hdf1c602_3.conda:  32%|███▏      | 92/291 [00:06<00:21,  9.47it/s]  [0m[91mExtracting : icu-58.2-h9c2bf20_1.conda:  32%|███▏      | 93/291 [00:06<00:20,  9.47it/s]  [0m[91mExtracting : icu-58.2-h9c2bf20_1.conda:  32%|███▏      | 94/291 [00:06<00:20,  9.39it/s][0m[91mExtracting : mkl_random-1.1.0-py37hd6b4f25_0.conda:  32%|███▏      | 94/291 [00:06<00:20,  9.39it/s][0m[91mExtracting : idna-2.8-py37_0.conda:  33%|███▎      | 95/291 [00:06<00:20,  9.39it/s]                [0m[91mExtracting : tornado-6.0.3-py37h7b6447c_0.conda:  33%|███▎      | 96/291 [00:06<00:20,  9.39it/s][0m[91mExtracting : pytest-astropy-0.5.0-py37_0.conda:  33%|███▎      | 97/291 [00:06<00:20,  9.39it/s] [0m[91mExtracting : navigator-updater-0.2.1-py37_0.conda:  34%|███▎      | 98/291 [00:06<00:20,  9.39it/s][0m[91mExtracting : urllib3-1.24.2-py37_0.conda:  34%|███▍      | 99/291 [00:06<00:20,  9.39it/s]         [0m[91mExtracting : fastcache-1.1.0-py37h7b6447c_0.conda:  34%|███▍      | 100/291 [00:06<00:20,  9.39it/s][0m[91mExtracting : pango-1.42.4-h049681c_0.conda:  35%|███▍      | 101/291 [00:06<00:20,  9.39it/s]       [0m[91mExtracting : simplegeneric-0.8.1-py37_2.conda:  35%|███▌      | 102/291 [00:06<00:20,  9.39it/s][0m[91mExtracting : mkl-2019.4-243.conda:  35%|███▌      | 103/291 [00:18<00:20,  9.39it/s]            [0m[91mExtracting : mkl-2019.4-243.conda:  36%|███▌      | 104/291 [00:18<01:21,  2.29it/s][0m[91mExtracting : qt-5.9.7-h5867ecd_1.conda:  36%|███▌      | 104/291 [00:18<01:21,  2.29it/s][0m[91mExtracting : nose-1.3.7-py37_2.conda:  36%|███▌      | 105/291 [00:18<01:21,  2.29it/s]  [0m[91mExtracting : get_terminal_size-1.0.0-haa9412d_0.conda:  36%|███▋      | 106/291 [00:18<01:20,  2.29it/s][0m[91mExtracting : pandoc-2.2.3.2-0.conda:  37%|███▋      | 107/291 [00:18<01:20,  2.29it/s]                  [0m[91mExtracting : lxml-4.4.1-py37hefd8a0e_0.conda:  37%|███▋      | 108/291 [00:18<01:20,  2.29it/s][0m[91mExtracting : blas-1.0-mkl.conda:  37%|███▋      | 109/291 [00:18<01:19,  2.29it/s]             [0m[91mExtracting : pycurl-7.43.0.3-py37h1ba5d50_0.conda:  38%|███▊      | 110/291 [00:18<01:19,  2.29it/s][0m[91mExtracting : _libgcc_mutex-0.1-main.conda:  38%|███▊      | 111/291 [00:18<01:18,  2.29it/s]        [0m[91mExtracting : blosc-1.16.3-hd408876_0.conda:  38%|███▊      | 112/291 [00:18<01:18,  2.29it/s][0m[91mExtracting : pycparser-2.19-py37_0.conda:  39%|███▉      | 113/291 [00:18<01:17,  2.29it/s]  [0m[91mExtracting : olefile-0.46-py37_0.conda:  39%|███▉      | 114/291 [00:18<01:17,  2.29it/s]  [0m[91mExtracting : bkcharts-0.2-py37_0.conda:  40%|███▉      | 115/291 [00:18<01:17,  2.29it/s][0m[91mExtracting : joblib-0.13.2-py37_0.conda:  40%|███▉      | 116/291 [00:18<01:16,  2.29it/s][0m[91mExtracting : conda-env-2.6.0-1.conda:  40%|████      | 117/291 [00:18<01:16,  2.29it/s]   [0m[91mExtracting : libarchive-3.3.3-h5d8350f_5.conda:  41%|████      | 118/291 [00:18<01:15,  2.29it/s][0m[91mExtracting : mkl-service-2.3.0-py37he904b0f_0.conda:  41%|████      | 119/291 [00:18<01:15,  2.29it/s][0m[91mExtracting : scikit-image-0.15.0-py37he6710b0_0.conda:  41%|████      | 120/291 [00:18<01:14,  2.29it/s][0m[91mExtracting : tqdm-4.36.1-py_0.conda:  42%|████▏     | 121/291 [00:18<01:14,  2.29it/s]                  [0m[91mExtracting : numpy-base-1.17.2-py37hde5b4d6_0.conda:  42%|████▏     | 122/291 [00:18<01:13,  2.29it/s][0m[91mExtracting : xlrd-1.2.0-py37_0.conda:  42%|████▏     | 123/291 [00:18<01:13,  2.29it/s]               [0m[91mExtracting : libcurl-7.65.3-h20c2e04_0.conda:  43%|████▎     | 124/291 [00:18<01:13,  2.29it/s][0m[91mExtracting : psutil-5.6.3-py37h7b6447c_0.conda:  43%|████▎     | 125/291 [00:18<01:12,  2.29it/s][0m[91mExtracting : libxslt-1.1.33-h7d1a2b0_0.conda:  43%|████▎     | 126/291 [00:18<01:12,  2.29it/s]  [0m[91mExtracting : terminado-0.8.2-py37_0.conda:  44%|████▎     | 127/291 [00:18<01:11,  2.29it/s]   [0m[91mExtracting : imagesize-1.1.0-py37_0.conda:  44%|████▍     | 128/291 [00:18<01:11,  2.29it/s][0m[91mExtracting : msgpack-python-0.6.1-py37hfd86e86_1.conda:  44%|████▍     | 129/291 [00:18<01:10,  2.29it/s][0m[91mExtracting : py-1.8.0-py37_0.conda:  45%|████▍     | 130/291 [00:18<01:10,  2.29it/s]                    [0m[91mExtracting : snappy-1.1.7-hbae5bb6_3.conda:  45%|████▌     | 131/291 [00:18<01:10,  2.29it/s][0m[91mExtracting : ncurses-6.1-he6710b0_1.conda:  45%|████▌     | 132/291 [00:19<01:09,  2.29it/s] [0m[91mExtracting : ncurses-6.1-he6710b0_1.conda:  46%|████▌     | 133/291 [00:19<00:48,  3.23it/s][0m[91mExtracting : pcre-8.43-he6710b0_0.conda:  46%|████▌     | 133/291 [00:19<00:48,  3.23it/s]  [0m[91mExtracting : libgcc-ng-9.1.0-hdf63c60_0.conda:  46%|████▌     | 134/291 [00:19<00:48,  3.23it/s][0m[91mExtracting : py-lief-0.9.0-py37h7725739_2.conda:  46%|████▋     | 135/291 [00:19<00:48,  3.23it/s][0m[91mExtracting : docutils-0.15.2-py37_0.conda:  47%|████▋     | 136/291 [00:19<00:47,  3.23it/s]      [0m[91mExtracting : docutils-0.15.2-py37_0.conda:  47%|████▋     | 137/291 [00:19<00:34,  4.43it/s][0m[91mExtracting : numexpr-2.7.0-py37h9e4a6bb_0.conda:  47%|████▋     | 137/291 [00:19<00:34,  4.43it/s][0m[91mExtracting : clyent-1.2.2-py37_1.conda:  47%|████▋     | 138/291 [00:19<00:34,  4.43it/s]         [0m[91mExtracting : bleach-3.1.0-py37_0.conda:  48%|████▊     | 139/291 [00:19<00:34,  4.43it/s][0m[91mExtracting : unicodecsv-0.14.1-py37_0.conda:  48%|████▊     | 140/291 [00:19<00:34,  4.43it/s][0m[91mExtracting : pytest-arraydiff-0.3-py37h39e3cac_0.conda:  48%|████▊     | 141/291 [00:19<00:33,  4.43it/s][0m[91mExtracting : pyopenssl-19.0.0-py37_0.conda:  49%|████▉     | 142/291 [00:19<00:33,  4.43it/s]            [0m[91mExtracting : cryptography-2.7-py37h1ba5d50_0.conda:  49%|████▉     | 143/291 [00:19<00:33,  4.43it/s][0m[91mExtracting : cryptography-2.7-py37h1ba5d50_0.conda:  49%|████▉     | 144/291 [00:19<00:23,  6.15it/s][0m[91mExtracting : krb5-1.16.1-h173b8e3_7.conda:  49%|████▉     | 144/291 [00:19<00:23,  6.15it/s]         [0m[91mExtracting : backcall-0.1.0-py37_0.conda:  50%|████▉     | 145/291 [00:19<00:23,  6.15it/s] [0m[91mExtracting : chardet-3.0.4-py37_1003.conda:  50%|█████     | 146/291 [00:19<00:23,  6.15it/s][0m[91mExtracting : gmp-6.1.2-h6c8ec71_1.conda:  51%|█████     | 147/291 [00:19<00:23,  6.15it/s]   [0m[91mExtracting : ruamel_yaml-0.15.46-py37h14c3975_0.conda:  51%|█████     | 148/291 [00:19<00:23,  6.15it/s][0m[91mExtracting : pytest-remotedata-0.3.2-py37_0.conda:  51%|█████     | 149/291 [00:19<00:23,  6.15it/s]    [0m[91mExtracting : fontconfig-2.13.0-h9420a91_0.conda:  52%|█████▏    | 150/291 [00:19<00:22,  6.15it/s]  [0m[91mExtracting : pycrypto-2.6.1-py37h14c3975_9.conda:  52%|█████▏    | 151/291 [00:19<00:22,  6.15it/s][0m[91mExtracting : pycrypto-2.6.1-py37h14c3975_9.conda:  52%|█████▏    | 152/291 [00:19<00:16,  8.46it/s][0m[91mExtracting : gmpy2-2.0.8-py37h10f8cd9_2.conda:  52%|█████▏    | 152/291 [00:19<00:16,  8.46it/s]   Extracting : et_xmlfile-1.0.1-py37_0.conda:  53%|█████▎    | 153/291 [00:19<00:16,  8.46it/s]   [0m[91mExtracting : libsodium-1.0.16-h1bed415_0.conda:  53%|█████▎    | 154/291 [00:19<00:16,  8.46it/s][0m[91mExtracting : pandas-0.25.1-py37he6710b0_0.conda:  53%|█████▎    | 155/291 [00:20<00:16,  8.46it/s][0m[91mExtracting : yaml-0.1.7-had09818_2.conda:  54%|█████▎    | 156/291 [00:20<00:15,  8.46it/s]       Extracting : yaml-0.1.7-had09818_2.conda:  54%|█████▍    | 157/291 [00:20<00:17,  7.52it/s][0m[91mExtracting : sip-4.19.8-py37hf484d3e_0.conda:  54%|█████▍    | 157/291 [00:20<00:17,  7.52it/s][0m[91mExtracting : pyqt-5.9.2-py37h05f1152_2.conda:  54%|█████▍    | 158/291 [00:20<00:17,  7.52it/s][0m[91mExtracting : unixodbc-2.3.7-h14c3975_0.conda:  55%|█████▍    | 159/291 [00:20<00:17,  7.52it/s][0m[91mExtracting : bitarray-1.0.1-py37h7b6447c_0.conda:  55%|█████▍    | 160/291 [00:20<00:17,  7.52it/s]Extracting : gst-plugins-base-1.14.0-hbbd80ab_1.conda:  55%|█████▌    | 161/291 [00:20<00:17,  7.52it/s][0m[91mExtracting : mock-3.0.5-py37_0.conda:  56%|█████▌    | 162/291 [00:20<00:17,  7.52it/s]                 [0m[91mExtracting : six-1.12.0-py37_0.conda:  56%|█████▌    | 163/291 [00:20<00:17,  7.52it/s][0m[91mExtracting : lz4-c-1.8.1.2-h14c3975_0.conda:  56%|█████▋    | 164/291 [00:20<00:16,  7.52it/s][0m[91mExtracting : h5py-2.9.0-py37h7918eee_0.conda:  57%|█████▋    | 165/291 [00:20<00:16,  7.52it/s][0m[91mExtracting : html5lib-1.0.1-py37_0.conda:  57%|█████▋    | 166/291 [00:20<00:16,  7.52it/s]    [0m[91mExtracting : isort-4.3.21-py37_0.conda:  57%|█████▋    | 167/291 [00:20<00:16,  7.52it/s]  [0m[91mExtracting : jupyter_console-6.0.0-py37_0.conda:  58%|█████▊    | 168/291 [00:20<00:16,  7.52it/s][0m[91mExtracting : jbig-2.1-hdba287a_0.conda:  58%|█████▊    | 169/291 [00:20<00:16,  7.52it/s]         [0m[91mExtracting : patsy-0.5.1-py37_0.conda:  58%|█████▊    | 170/291 [00:20<00:16,  7.52it/s] [0m[91mExtracting : cffi-1.12.3-py37h2e261b9_0.conda:  59%|█████▉    | 171/291 [00:20<00:15,  7.52it/s][0m[91mExtracting : ipython_genutils-0.2.0-py37_0.conda:  59%|█████▉    | 172/291 [00:20<00:15,  7.52it/s][0m[91mExtracting : ipython_genutils-0.2.0-py37_0.conda:  59%|█████▉    | 173/291 [00:20<00:11, 10.52it/s][0m[91mExtracting : openssl-1.1.1d-h7b6447c_2.conda:  59%|█████▉    | 173/291 [00:20<00:11, 10.52it/s]    [0m[91mExtracting : pep8-1.7.1-py37_0.conda:  60%|█████▉    | 174/291 [00:20<00:11, 10.52it/s]        [0m[91mExtracting : conda-package-handling-1.6.0-py37h7b6447c_0.conda:  60%|██████    | 175/291 [00:20<00:11, 10.52it/s][0m[91mExtracting : pickleshare-0.7.5-py37_0.conda:  60%|██████    | 176/291 [00:20<00:10, 10.52it/s]                   [0m[91mExtracting : pytables-3.5.2-py37h71ec239_1.conda:  61%|██████    | 177/291 [00:20<00:10, 10.52it/s][0m[91mExtracting : beautifulsoup4-4.8.0-py37_0.conda:  61%|██████    | 178/291 [00:20<00:10, 10.52it/s]  [0m[91mExtracting : xz-5.2.4-h14c3975_4.conda:  62%|██████▏   | 179/291 [00:20<00:10, 10.52it/s]        [0m[91mExtracting : cython-0.29.13-py37he6710b0_0.conda:  62%|██████▏   | 180/291 [00:21<00:10, 10.52it/s][0m[91mExtracting : cython-0.29.13-py37he6710b0_0.conda:  62%|██████▏   | 181/291 [00:21<00:09, 11.42it/s][0m[91mExtracting : decorator-4.4.0-py37_1.conda:  62%|██████▏   | 181/291 [00:21<00:09, 11.42it/s]       [0m[91mExtracting : bottleneck-1.2.1-py37h035aef0_1.conda:  63%|██████▎   | 182/291 [00:21<00:09, 11.42it/s][0m[91mExtracting : freetype-2.9.1-h8a8886c_1.conda:  63%|██████▎   | 183/291 [00:21<00:09, 11.42it/s]      [0m[91mExtracting : mistune-0.8.4-py37h7b6447c_0.conda:  63%|██████▎   | 184/291 [00:21<00:09, 11.42it/s][0m[91mExtracting : harfbuzz-1.8.8-hffaf4a1_0.conda:  64%|██████▎   | 185/291 [00:21<00:09, 11.42it/s]   [0m[91mExtracting : heapdict-1.0.1-py_0.conda:  64%|██████▍   | 186/291 [00:21<00:09, 11.42it/s]      [0m[91mExtracting : libtiff-4.0.10-h2733197_2.conda:  64%|██████▍   | 187/291 [00:21<00:09, 11.42it/s][0m[91mExtracting : pyodbc-4.0.27-py37he6710b0_0.conda:  65%|██████▍   | 188/291 [00:21<00:09, 11.42it/s][0m[91mExtracting : multipledispatch-0.6.0-py37_0.conda:  65%|██████▍   | 189/291 [00:21<00:08, 11.42it/s][0m[91mExtracting : bokeh-1.3.4-py37_0.conda:  65%|██████▌   | 190/291 [00:21<00:08, 11.42it/s]           [0m[91mExtracting : bokeh-1.3.4-py37_0.conda:  66%|██████▌   | 191/291 [00:21<00:07, 13.13it/s][0m[91mExtracting : kiwisolver-1.1.0-py37he6710b0_0.conda:  66%|██████▌   | 191/291 [00:21<00:07, 13.13it/s][0m[91mExtracting : libssh2-1.8.2-h1ba5d50_0.conda:  66%|██████▌   | 192/291 [00:21<00:07, 13.13it/s]       [0m[91mExtracting : alabaster-0.7.12-py37_0.conda:  66%|██████▋   | 193/291 [00:21<00:07, 13.13it/s] [0m[91mExtracting : numpy-1.17.2-py37haad9e8e_0.conda:  67%|██████▋   | 194/291 [00:21<00:07, 13.13it/s][0m[91mExtracting : xlwt-1.3.0-py37_0.conda:  67%|██████▋   | 195/291 [00:21<00:07, 13.13it/s]          [0m[91mExtracting : ripgrep-0.10.0-hc07d326_0.conda:  67%|██████▋   | 196/291 [00:21<00:07, 13.13it/s][0m[91mExtracting : sphinxcontrib-1.0-py37_1.conda:  68%|██████▊   | 197/291 [00:21<00:07, 13.13it/s] [0m[91mExtracting : mkl_fft-1.0.14-py37ha843d7b_0.conda:  68%|██████▊   | 198/291 [00:21<00:07, 13.13it/s][0m[91mExtracting : graphite2-1.3.13-h23475e2_0.conda:  68%|██████▊   | 199/291 [00:21<00:07, 13.13it/s]  Extracting : webencodings-0.5.1-py37_1.conda:  69%|██████▊   | 200/291 [00:21<00:06, 13.13it/s]  [0m[91mExtracting : lazy-object-proxy-1.4.2-py37h7b6447c_0.conda:  69%|██████▉   | 201/291 [00:21<00:06, 13.13it/s][0m[91mExtracting : pandocfilters-1.4.2-py37_1.conda:  69%|██████▉   | 202/291 [00:21<00:06, 13.13it/s]            [0m[91mExtracting : pkginfo-1.5.0.1-py37_0.conda:  70%|██████▉   | 203/291 [00:21<00:06, 13.13it/s]    [0m[91mExtracting : numba-0.45.1-py37h962f231_0.conda:  70%|███████   | 204/291 [00:21<00:06, 13.13it/s][0m[91mExtracting : contextlib2-0.6.0-py_0.tar.bz2:  70%|███████   | 205/291 [00:21<00:06, 13.13it/s]   [0m[91mExtracting : prompt_toolkit-2.0.10-py_0.tar.bz2:  71%|███████   | 206/291 [00:21<00:06, 13.13it/s]Extracting : prompt_toolkit-2.0.10-py_0.tar.bz2:  71%|███████   | 207/291 [00:21<00:04, 17.95it/s][0m[91mExtracting : zipp-0.6.0-py_0.tar.bz2:  71%|███████   | 207/291 [00:21<00:04, 17.95it/s]           Extracting : pytest-openfiles-0.4.0-py_0.tar.bz2:  71%|███████▏  | 208/291 [00:21<00:04, 17.95it/s][0m[91mExtracting : pyrsistent-0.15.4-py37h7b6447c_0.tar.bz2:  72%|███████▏  | 209/291 [00:21<00:04, 17.95it/s][0m[91mExtracting : pytest-5.2.1-py37_0.tar.bz2:  72%|███████▏  | 210/291 [00:21<00:04, 17.95it/s]             [0m[91mExtracting : attrs-19.2.0-py_0.tar.bz2:  73%|███████▎  | 211/291 [00:21<00:04, 17.95it/s]  [0m[91mExtracting : qtconsole-4.5.5-py_0.tar.bz2:  73%|███████▎  | 212/291 [00:21<00:04, 17.95it/s]Extracting : certifi-2019.9.11-py37_0.tar.bz2:  73%|███████▎  | 213/291 [00:21<00:04, 17.95it/s][0m[91mExtracting : certifi-2019.9.11-py37_0.tar.bz2:  74%|███████▎  | 214/291 [00:21<00:03, 22.55it/s][0m[91mExtracting : pyparsing-2.4.2-py_0.tar.bz2:  74%|███████▎  | 214/291 [00:21<00:03, 22.55it/s]    [0m[91mExtracting : xlsxwriter-1.2.1-py_0.tar.bz2:  74%|███████▍  | 215/291 [00:21<00:03, 22.55it/s][0m[91mExtracting : sqlalchemy-1.3.9-py37h7b6447c_0.tar.bz2:  74%|███████▍  | 216/291 [00:23<00:03, 22.55it/s][0m[91mExtracting : werkzeug-0.16.0-py_0.tar.bz2:  75%|███████▍  | 217/291 [00:23<00:03, 22.55it/s]           [0m[91mExtracting : backports.weakref-1.0.post1-py_1.tar.bz2:  75%|███████▍  | 218/291 [00:23<00:03, 22.55it/s][0m[91mExtracting : conda-verify-3.4.2-py_1.tar.bz2:  75%|███████▌  | 219/291 [00:23<00:03, 22.55it/s]         [0m[91mExtracting : setuptools-41.4.0-py37_0.tar.bz2:  76%|███████▌  | 220/291 [00:23<00:03, 22.55it/s][0m[91mExtracting : setuptools-41.4.0-py37_0.tar.bz2:  76%|███████▌  | 221/291 [00:23<00:07,  9.57it/s]Extracting : sphinxcontrib-devhelp-1.0.1-py_0.tar.bz2:  76%|███████▌  | 221/291 [00:23<00:07,  9.57it/s][0m[91mExtracting : anaconda-navigator-1.9.7-py37_0.tar.bz2:  76%|███████▋  | 222/291 [00:24<00:07,  9.57it/s] [0m[91mExtracting : tblib-1.4.0-py_0.tar.bz2:  77%|███████▋  | 223/291 [00:24<00:07,  9.57it/s]               [0m[91mExtracting : distributed-2.5.2-py_0.tar.bz2:  77%|███████▋  | 224/291 [00:24<00:06,  9.57it/s][0m[91mExtracting : pylint-2.4.2-py37_0.tar.bz2:  77%|███████▋  | 225/291 [00:24<00:06,  9.57it/s]   Extracting : pylint-2.4.2-py37_0.tar.bz2:  78%|███████▊  | 226/291 [00:24<00:07,  8.21it/s][0m[91mExtracting : pip-19.2.3-py37_0.tar.bz2:  78%|███████▊  | 226/291 [00:24<00:07,  8.21it/s]  [0m[91mExtracting : filelock-3.0.12-py_0.tar.bz2:  78%|███████▊  | 227/291 [00:24<00:07,  8.21it/s][0m[91mExtracting : backports.functools_lru_cache-1.5-py_2.tar.bz2:  78%|███████▊  | 228/291 [00:24<00:07,  8.21it/s][0m[91mExtracting : anaconda-project-0.8.3-py_0.tar.bz2:  79%|███████▊  | 229/291 [00:24<00:07,  8.21it/s]           [0m[91mExtracting : anaconda-project-0.8.3-py_0.tar.bz2:  79%|███████▉  | 230/291 [00:24<00:06,  9.17it/s][0m[91mExtracting : notebook-6.0.1-py37_0.tar.bz2:  79%|███████▉  | 230/291 [00:26<00:06,  9.17it/s]      [0m[91mExtracting : qtpy-1.9.0-py_0.tar.bz2:  79%|███████▉  | 231/291 [00:26<00:06,  9.17it/s]      [0m[91mExtracting : pluggy-0.13.0-py37_0.tar.bz2:  80%|███████▉  | 232/291 [00:26<00:06,  9.17it/s][0m[91mExtracting : pluggy-0.13.0-py37_0.tar.bz2:  80%|████████  | 233/291 [00:26<00:16,  3.53it/s][0m[91mExtracting : pathlib2-2.3.5-py37_0.tar.bz2:  80%|████████  | 233/291 [00:26<00:16,  3.53it/s][0m[91mExtracting : snowballstemmer-2.0.0-py_0.tar.bz2:  80%|████████  | 234/291 [00:26<00:16,  3.53it/s][0m[91mExtracting : asn1crypto-1.0.1-py37_0.tar.bz2:  81%|████████  | 235/291 [00:26<00:15,  3.53it/s]   [0m[91mExtracting : sphinxcontrib-applehelp-1.0.1-py_0.tar.bz2:  81%|████████  | 236/291 [00:26<00:15,  3.53it/s][0m[91mExtracting : sphinx-2.2.0-py_0.tar.bz2:  81%|████████▏ | 237/291 [00:26<00:15,  3.53it/s]                 [0m[91mExtracting : imageio-2.6.0-py37_0.tar.bz2:  82%|████████▏ | 238/291 [00:26<00:15,  3.53it/s][0m[91mExtracting : imageio-2.6.0-py37_0.tar.bz2:  82%|████████▏ | 239/291 [00:26<00:10,  4.84it/s][0m[91mExtracting : pillow-6.2.0-py37h34e0f95_0.tar.bz2:  82%|████████▏ | 239/291 [00:26<00:10,  4.84it/s][0m[91mExtracting : fsspec-0.5.2-py_0.tar.bz2:  82%|████████▏ | 240/291 [00:26<00:10,  4.84it/s]          [0m[91mExtracting : sphinxcontrib-websupport-1.1.2-py_0.tar.bz2:  83%|████████▎ | 241/291 [00:26<00:10,  4.84it/s][0m[91mExtracting : glob2-0.7-py_0.tar.bz2:  83%|████████▎ | 242/291 [00:26<00:10,  4.84it/s]                     [0m[91mExtracting : babel-2.7.0-py_0.tar.bz2:  84%|████████▎ | 243/291 [00:29<00:09,  4.84it/s][0m[91mExtracting : babel-2.7.0-py_0.tar.bz2:  84%|████████▍ | 244/291 [00:29<00:13,  3.57it/s][0m[91mExtracting : sqlite-3.30.0-h7b6447c_0.tar.bz2:  84%|████████▍ | 244/291 [00:29<00:13,  3.57it/s][0m[91mExtracting : dask-core-2.5.2-py_0.tar.bz2:  84%|████████▍ | 245/291 [00:29<00:12,  3.57it/s]    [0m[91mExtracting : jinja2-2.10.3-py_0.tar.bz2:  85%|████████▍ | 246/291 [00:29<00:12,  3.57it/s]  [0m[91mExtracting : sphinxcontrib-htmlhelp-1.0.2-py_0.tar.bz2:  85%|████████▍ | 247/291 [00:29<00:12,  3.57it/s][0m[91mExtracting : json5-0.8.5-py_0.tar.bz2:  85%|████████▌ | 248/291 [00:29<00:12,  3.57it/s]                 [0m[91mExtracting : ipywidgets-7.5.1-py_0.tar.bz2:  86%|████████▌ | 249/291 [00:29<00:11,  3.57it/s]Extracting : sphinxcontrib-serializinghtml-1.1.3-py_0.tar.bz2:  86%|████████▌ | 250/291 [00:29<00:11,  3.57it/s][0m[91mExtracting : partd-1.0.0-py_0.tar.bz2:  86%|████████▋ | 251/291 [00:29<00:11,  3.57it/s]                        [0m[91mExtracting : ca-certificates-2019.8.28-0.tar.bz2:  87%|████████▋ | 252/291 [00:29<00:10,  3.57it/s][0m[91mExtracting : backports-1.0-py_2.tar.bz2:  87%|████████▋ | 253/291 [00:29<00:10,  3.57it/s]         [0m[91mExtracting : conda-4.7.12-py37_0.tar.bz2:  87%|████████▋ | 254/291 [00:29<00:10,  3.57it/s][0m[91mExtracting : parso-0.5.1-py_0.tar.bz2:  88%|████████▊ | 255/291 [00:29<00:10,  3.57it/s]   [0m[91mExtracting : qtawesome-0.6.0-py_0.tar.bz2:  88%|████████▊ | 256/291 [00:29<00:09,  3.57it/s][0m[91mExtracting : qtawesome-0.6.0-py_0.tar.bz2:  88%|████████▊ | 257/291 [00:29<00:06,  5.01it/s][0m[91mExtracting : zict-1.0.0-py_0.tar.bz2:  88%|████████▊ | 257/291 [00:29<00:06,  5.01it/s]     [0m[91mExtracting : defusedxml-0.6.0-py_0.tar.bz2:  89%|████████▊ | 258/291 [00:29<00:06,  5.01it/s][0m[91mExtracting : jupyter_core-4.5.0-py_0.tar.bz2:  89%|████████▉ | 259/291 [00:29<00:06,  5.01it/s][0m[91mExtracting : networkx-2.3-py_0.tar.bz2:  89%|████████▉ | 260/291 [00:29<00:06,  5.01it/s]      [0m[91mExtracting : networkx-2.3-py_0.tar.bz2:  90%|████████▉ | 261/291 [00:29<00:05,  5.59it/s][0m[91mExtracting : jdcal-1.4.1-py_0.tar.bz2:  90%|████████▉ | 261/291 [00:29<00:05,  5.59it/s] [0m[91mExtracting : dask-2.5.2-py_0.tar.bz2:  90%|█████████ | 262/291 [00:29<00:05,  5.59it/s] [0m[91mExtracting : jeepney-0.4.1-py_0.tar.bz2:  90%|█████████ | 263/291 [00:29<00:05,  5.59it/s][0m[91mExtracting : soupsieve-1.9.3-py37_0.tar.bz2:  91%|█████████ | 264/291 [00:29<00:04,  5.59it/s][0m[91mExtracting : cloudpickle-1.2.2-py_0.tar.bz2:  91%|█████████ | 265/291 [00:29<00:04,  5.59it/s][0m[91mExtracting : pysocks-1.7.1-py37_0.tar.bz2:  91%|█████████▏| 266/291 [00:29<00:04,  5.59it/s]  [0m[91mExtracting : nbconvert-5.6.0-py37_1.tar.bz2:  92%|█████████▏| 267/291 [00:29<00:04,  5.59it/s][0m[91mExtracting : jupyter_client-5.3.3-py37_1.tar.bz2:  92%|█████████▏| 268/291 [00:29<00:04,  5.59it/s][0m[91mExtracting : toolz-0.10.0-py_0.tar.bz2:  92%|█████████▏| 269/291 [00:29<00:03,  5.59it/s]          [0m[91mExtracting : prometheus_client-0.7.1-py_0.tar.bz2:  93%|█████████▎| 270/291 [00:29<00:03,  5.59it/s][0m[91mExtracting : traitlets-4.3.3-py37_0.tar.bz2:  93%|█████████▎| 271/291 [00:29<00:03,  5.59it/s]      [0m[91mExtracting : jupyterlab_server-1.0.6-py_0.tar.bz2:  93%|█████████▎| 272/291 [00:29<00:03,  5.59it/s][0m[91mExtracting : pytest-doctestplus-0.4.0-py_0.tar.bz2:  94%|█████████▍| 273/291 [00:29<00:03,  5.59it/s][0m[91mExtracting : rope-0.14.0-py_0.tar.bz2:  94%|█████████▍| 274/291 [00:29<00:03,  5.59it/s]             [0m[91mExtracting : pytz-2019.3-py_0.tar.bz2:  95%|█████████▍| 275/291 [00:30<00:02,  5.59it/s]Extracting : pytz-2019.3-py_0.tar.bz2:  95%|█████████▍| 276/291 [00:30<00:01,  7.74it/s][0m[91mExtracting : astroid-2.3.1-py37_0.tar.bz2:  95%|█████████▍| 276/291 [00:30<00:01,  7.74it/s][0m[91mExtracting : openpyxl-3.0.0-py_0.tar.bz2:  95%|█████████▌| 277/291 [00:30<00:01,  7.74it/s] Extracting : flask-1.1.1-py_0.tar.bz2:  96%|█████████▌| 278/291 [00:30<00:01,  7.74it/s]   [0m[91mExtracting : importlib_metadata-0.23-py37_0.tar.bz2:  96%|█████████▌| 279/291 [00:30<00:01,  7.74it/s][0m[91mExtracting : anaconda-2019.10-py37_0.tar.bz2:  96%|█████████▌| 280/291 [00:30<00:01,  7.74it/s]       [0m[91mExtracting : anaconda-2019.10-py37_0.tar.bz2:  97%|█████████▋| 281/291 [00:30<00:00, 10.33it/s][0m[91mExtracting : wheel-0.33.6-py37_0.tar.bz2:  97%|█████████▋| 281/291 [00:30<00:00, 10.33it/s]    [0m[91mExtracting : spyder-kernels-0.5.2-py37_0.tar.bz2:  97%|█████████▋| 282/291 [00:30<00:00, 10.33it/s][0m[91mExtracting : numpydoc-0.9.1-py_0.tar.bz2:  97%|█████████▋| 283/291 [00:30<00:00, 10.33it/s]        [0m[91mExtracting : sphinxcontrib-jsmath-1.0.1-py_0.tar.bz2:  98%|█████████▊| 284/291 [00:30<00:00, 10.33it/s][0m[91mExtracting : astropy-3.2.2-py37h7b6447c_0.tar.bz2:  98%|█████████▊| 285/291 [00:32<00:00, 10.33it/s]   [0m[91mExtracting : astropy-3.2.2-py37h7b6447c_0.tar.bz2:  98%|█████████▊| 286/291 [00:32<00:01,  4.47it/s]Extracting : packaging-19.2-py_0.tar.bz2:  98%|█████████▊| 286/291 [00:32<00:01,  4.47it/s]         Extracting : pygments-2.4.2-py_0.tar.bz2:  99%|█████████▊| 287/291 [00:32<00:00,  4.47it/s][0m[91mExtracting : path.py-12.0.1-py_0.tar.bz2:  99%|█████████▉| 288/291 [00:32<00:00,  4.47it/s][0m[91mExtracting : sphinxcontrib-qthelp-1.0.2-py_0.tar.bz2:  99%|█████████▉| 289/291 [00:32<00:00,  4.47it/s][0m[91mExtracting : backports.tempfile-1.0-py_1.tar.bz2: 100%|█████████▉| 290/291 [00:32<00:00,  4.47it/s]    [0m[91m                                                                                                   [0m[91m[0mCollecting package metadata (current_repodata.json): ...working... done
-Solving environment: ...working... done
-
-## Package Plan ##
-
-  environment location: /opt/conda
-
-  added / updated specs:
-    - _ipyw_jlab_nb_ext_conf==0.1.0=py37_0
-    - _libgcc_mutex==0.1=main
-    - alabaster==0.7.12=py37_0
-    - anaconda-client==1.7.2=py37_0
-    - anaconda-navigator==1.9.7=py37_0
-    - anaconda-project==0.8.3=py_0
-    - anaconda==2019.10=py37_0
-    - asn1crypto==1.0.1=py37_0
-    - astroid==2.3.1=py37_0
-    - astropy==3.2.2=py37h7b6447c_0
-    - atomicwrites==1.3.0=py37_1
-    - attrs==19.2.0=py_0
-    - babel==2.7.0=py_0
-    - backcall==0.1.0=py37_0
-    - backports.functools_lru_cache==1.5=py_2
-    - backports.os==0.1.1=py37_0
-    - backports.shutil_get_terminal_size==1.0.0=py37_2
-    - backports.tempfile==1.0=py_1
-    - backports.weakref==1.0.post1=py_1
-    - backports==1.0=py_2
-    - beautifulsoup4==4.8.0=py37_0
-    - bitarray==1.0.1=py37h7b6447c_0
-    - bkcharts==0.2=py37_0
-    - blas==1.0=mkl
-    - bleach==3.1.0=py37_0
-    - blosc==1.16.3=hd408876_0
-    - bokeh==1.3.4=py37_0
-    - boto==2.49.0=py37_0
-    - bottleneck==1.2.1=py37h035aef0_1
-    - bzip2==1.0.8=h7b6447c_0
-    - ca-certificates==2019.8.28=0
-    - cairo==1.14.12=h8948797_3
-    - certifi==2019.9.11=py37_0
-    - cffi==1.12.3=py37h2e261b9_0
-    - chardet==3.0.4=py37_1003
-    - click==7.0=py37_0
-    - cloudpickle==1.2.2=py_0
-    - clyent==1.2.2=py37_1
-    - colorama==0.4.1=py37_0
-    - conda-build==3.18.9=py37_3
-    - conda-env==2.6.0=1
-    - conda-package-handling==1.6.0=py37h7b6447c_0
-    - conda-verify==3.4.2=py_1
-    - conda==4.7.12=py37_0
-    - contextlib2==0.6.0=py_0
-    - cryptography==2.7=py37h1ba5d50_0
-    - curl==7.65.3=hbc83047_0
-    - cycler==0.10.0=py37_0
-    - cython==0.29.13=py37he6710b0_0
-    - cytoolz==0.10.0=py37h7b6447c_0
-    - dask-core==2.5.2=py_0
-    - dask==2.5.2=py_0
-    - dbus==1.13.6=h746ee38_0
-    - decorator==4.4.0=py37_1
-    - defusedxml==0.6.0=py_0
-    - distributed==2.5.2=py_0
-    - docutils==0.15.2=py37_0
-    - entrypoints==0.3=py37_0
-    - et_xmlfile==1.0.1=py37_0
-    - expat==2.2.6=he6710b0_0
-    - fastcache==1.1.0=py37h7b6447c_0
-    - filelock==3.0.12=py_0
-    - flask==1.1.1=py_0
-    - fontconfig==2.13.0=h9420a91_0
-    - freetype==2.9.1=h8a8886c_1
-    - fribidi==1.0.5=h7b6447c_0
-    - fsspec==0.5.2=py_0
-    - future==0.17.1=py37_0
-    - get_terminal_size==1.0.0=haa9412d_0
-    - gevent==1.4.0=py37h7b6447c_0
-    - glib==2.56.2=hd408876_0
-    - glob2==0.7=py_0
-    - gmp==6.1.2=h6c8ec71_1
-    - gmpy2==2.0.8=py37h10f8cd9_2
-    - graphite2==1.3.13=h23475e2_0
-    - greenlet==0.4.15=py37h7b6447c_0
-    - gst-plugins-base==1.14.0=hbbd80ab_1
-    - gstreamer==1.14.0=hb453b48_1
-    - h5py==2.9.0=py37h7918eee_0
-    - harfbuzz==1.8.8=hffaf4a1_0
-    - hdf5==1.10.4=hb1b8bf9_0
-    - heapdict==1.0.1=py_0
-    - html5lib==1.0.1=py37_0
-    - icu==58.2=h9c2bf20_1
-    - idna==2.8=py37_0
-    - imageio==2.6.0=py37_0
-    - imagesize==1.1.0=py37_0
-    - importlib_metadata==0.23=py37_0
-    - intel-openmp==2019.4=243
-    - ipykernel==5.1.2=py37h39e3cac_0
-    - ipython==7.8.0=py37h39e3cac_0
-    - ipython_genutils==0.2.0=py37_0
-    - ipywidgets==7.5.1=py_0
-    - isort==4.3.21=py37_0
-    - itsdangerous==1.1.0=py37_0
-    - jbig==2.1=hdba287a_0
-    - jdcal==1.4.1=py_0
-    - jedi==0.15.1=py37_0
-    - jeepney==0.4.1=py_0
-    - jinja2==2.10.3=py_0
-    - joblib==0.13.2=py37_0
-    - jpeg==9b=h024ee3a_2
-    - json5==0.8.5=py_0
-    - jsonschema==3.0.2=py37_0
-    - jupyter==1.0.0=py37_7
-    - jupyter_client==5.3.3=py37_1
-    - jupyter_console==6.0.0=py37_0
-    - jupyter_core==4.5.0=py_0
-    - jupyterlab==1.1.4=pyhf63ae98_0
-    - jupyterlab_server==1.0.6=py_0
-    - keyring==18.0.0=py37_0
-    - kiwisolver==1.1.0=py37he6710b0_0
-    - krb5==1.16.1=h173b8e3_7
-    - lazy-object-proxy==1.4.2=py37h7b6447c_0
-    - libarchive==3.3.3=h5d8350f_5
-    - libcurl==7.65.3=h20c2e04_0
-    - libedit==3.1.20181209=hc058e9b_0
-    - libffi==3.2.1=hd88cf55_4
-    - libgcc-ng==9.1.0=hdf63c60_0
-    - libgfortran-ng==7.3.0=hdf63c60_0
-    - liblief==0.9.0=h7725739_2
-    - libpng==1.6.37=hbc83047_0
-    - libsodium==1.0.16=h1bed415_0
-    - libssh2==1.8.2=h1ba5d50_0
-    - libstdcxx-ng==9.1.0=hdf63c60_0
-    - libtiff==4.0.10=h2733197_2
-    - libtool==2.4.6=h7b6447c_5
-    - libuuid==1.0.3=h1bed415_2
-    - libxcb==1.13=h1bed415_1
-    - libxml2==2.9.9=hea5a465_1
-    - libxslt==1.1.33=h7d1a2b0_0
-    - llvmlite==0.29.0=py37hd408876_0
-    - locket==0.2.0=py37_1
-    - lxml==4.4.1=py37hefd8a0e_0
-    - lz4-c==1.8.1.2=h14c3975_0
-    - lzo==2.10=h49e0be7_2
-    - markupsafe==1.1.1=py37h7b6447c_0
-    - matplotlib==3.1.1=py37h5429711_0
-    - mccabe==0.6.1=py37_1
-    - mistune==0.8.4=py37h7b6447c_0
-    - mkl-service==2.3.0=py37he904b0f_0
-    - mkl==2019.4=243
-    - mkl_fft==1.0.14=py37ha843d7b_0
-    - mkl_random==1.1.0=py37hd6b4f25_0
-    - mock==3.0.5=py37_0
-    - more-itertools==7.2.0=py37_0
-    - mpc==1.1.0=h10f8cd9_1
-    - mpfr==4.0.1=hdf1c602_3
-    - mpmath==1.1.0=py37_0
-    - msgpack-python==0.6.1=py37hfd86e86_1
-    - multipledispatch==0.6.0=py37_0
-    - navigator-updater==0.2.1=py37_0
-    - nbconvert==5.6.0=py37_1
-    - nbformat==4.4.0=py37_0
-    - ncurses==6.1=he6710b0_1
-    - networkx==2.3=py_0
-    - nltk==3.4.5=py37_0
-    - nose==1.3.7=py37_2
-    - notebook==6.0.1=py37_0
-    - numba==0.45.1=py37h962f231_0
-    - numexpr==2.7.0=py37h9e4a6bb_0
-    - numpy-base==1.17.2=py37hde5b4d6_0
-    - numpy==1.17.2=py37haad9e8e_0
-    - numpydoc==0.9.1=py_0
-    - olefile==0.46=py37_0
-    - openpyxl==3.0.0=py_0
-    - openssl==1.1.1d=h7b6447c_2
-    - packaging==19.2=py_0
-    - pandas==0.25.1=py37he6710b0_0
-    - pandoc==2.2.3.2=0
-    - pandocfilters==1.4.2=py37_1
-    - pango==1.42.4=h049681c_0
-    - parso==0.5.1=py_0
-    - partd==1.0.0=py_0
-    - patchelf==0.9=he6710b0_3
-    - path.py==12.0.1=py_0
-    - pathlib2==2.3.5=py37_0
-    - patsy==0.5.1=py37_0
-    - pcre==8.43=he6710b0_0
-    - pep8==1.7.1=py37_0
-    - pexpect==4.7.0=py37_0
-    - pickleshare==0.7.5=py37_0
-    - pillow==6.2.0=py37h34e0f95_0
-    - pip==19.2.3=py37_0
-    - pixman==0.38.0=h7b6447c_0
-    - pkginfo==1.5.0.1=py37_0
-    - pluggy==0.13.0=py37_0
-    - ply==3.11=py37_0
-    - prometheus_client==0.7.1=py_0
-    - prompt_toolkit==2.0.10=py_0
-    - psutil==5.6.3=py37h7b6447c_0
-    - ptyprocess==0.6.0=py37_0
-    - py-lief==0.9.0=py37h7725739_2
-    - py==1.8.0=py37_0
-    - pycodestyle==2.5.0=py37_0
-    - pycosat==0.6.3=py37h14c3975_0
-    - pycparser==2.19=py37_0
-    - pycrypto==2.6.1=py37h14c3975_9
-    - pycurl==7.43.0.3=py37h1ba5d50_0
-    - pyflakes==2.1.1=py37_0
-    - pygments==2.4.2=py_0
-    - pylint==2.4.2=py37_0
-    - pyodbc==4.0.27=py37he6710b0_0
-    - pyopenssl==19.0.0=py37_0
-    - pyparsing==2.4.2=py_0
-    - pyqt==5.9.2=py37h05f1152_2
-    - pyrsistent==0.15.4=py37h7b6447c_0
-    - pysocks==1.7.1=py37_0
-    - pytables==3.5.2=py37h71ec239_1
-    - pytest-arraydiff==0.3=py37h39e3cac_0
-    - pytest-astropy==0.5.0=py37_0
-    - pytest-doctestplus==0.4.0=py_0
-    - pytest-openfiles==0.4.0=py_0
-    - pytest-remotedata==0.3.2=py37_0
-    - pytest==5.2.1=py37_0
-    - python-dateutil==2.8.0=py37_0
-    - python-libarchive-c==2.8=py37_13
-    - python==3.7.4=h265db76_1
-    - pytz==2019.3=py_0
-    - pywavelets==1.0.3=py37hdd07704_1
-    - pyyaml==5.1.2=py37h7b6447c_0
-    - pyzmq==18.1.0=py37he6710b0_0
-    - qt==5.9.7=h5867ecd_1
-    - qtawesome==0.6.0=py_0
-    - qtconsole==4.5.5=py_0
-    - qtpy==1.9.0=py_0
-    - readline==7.0=h7b6447c_5
-    - requests==2.22.0=py37_0
-    - ripgrep==0.10.0=hc07d326_0
-    - rope==0.14.0=py_0
-    - ruamel_yaml==0.15.46=py37h14c3975_0
-    - scikit-image==0.15.0=py37he6710b0_0
-    - scikit-learn==0.21.3=py37hd81dba3_0
-    - scipy==1.3.1=py37h7c811a0_0
-    - seaborn==0.9.0=py37_0
-    - secretstorage==3.1.1=py37_0
-    - send2trash==1.5.0=py37_0
-    - setuptools==41.4.0=py37_0
-    - simplegeneric==0.8.1=py37_2
-    - singledispatch==3.4.0.3=py37_0
-    - sip==4.19.8=py37hf484d3e_0
-    - six==1.12.0=py37_0
-    - snappy==1.1.7=hbae5bb6_3
-    - snowballstemmer==2.0.0=py_0
-    - sortedcollections==1.1.2=py37_0
-    - sortedcontainers==2.1.0=py37_0
-    - soupsieve==1.9.3=py37_0
-    - sphinx==2.2.0=py_0
-    - sphinxcontrib-applehelp==1.0.1=py_0
-    - sphinxcontrib-devhelp==1.0.1=py_0
-    - sphinxcontrib-htmlhelp==1.0.2=py_0
-    - sphinxcontrib-jsmath==1.0.1=py_0
-    - sphinxcontrib-qthelp==1.0.2=py_0
-    - sphinxcontrib-serializinghtml==1.1.3=py_0
-    - sphinxcontrib-websupport==1.1.2=py_0
-    - sphinxcontrib==1.0=py37_1
-    - spyder-kernels==0.5.2=py37_0
-    - spyder==3.3.6=py37_0
-    - sqlalchemy==1.3.9=py37h7b6447c_0
-    - sqlite==3.30.0=h7b6447c_0
-    - statsmodels==0.10.1=py37hdd07704_0
-    - sympy==1.4=py37_0
-    - tbb==2019.4=hfd86e86_0
-    - tblib==1.4.0=py_0
-    - terminado==0.8.2=py37_0
-    - testpath==0.4.2=py37_0
-    - tk==8.6.8=hbc83047_0
-    - toolz==0.10.0=py_0
-    - tornado==6.0.3=py37h7b6447c_0
-    - tqdm==4.36.1=py_0
-    - traitlets==4.3.3=py37_0
-    - unicodecsv==0.14.1=py37_0
-    - unixodbc==2.3.7=h14c3975_0
-    - urllib3==1.24.2=py37_0
-    - wcwidth==0.1.7=py37_0
-    - webencodings==0.5.1=py37_1
-    - werkzeug==0.16.0=py_0
-    - wheel==0.33.6=py37_0
-    - widgetsnbextension==3.5.1=py37_0
-    - wrapt==1.11.2=py37h7b6447c_0
-    - wurlitzer==1.0.3=py37_0
-    - xlrd==1.2.0=py37_0
-    - xlsxwriter==1.2.1=py_0
-    - xlwt==1.3.0=py37_0
-    - xz==5.2.4=h14c3975_4
-    - yaml==0.1.7=had09818_2
-    - zeromq==4.3.1=he6710b0_3
-    - zict==1.0.0=py_0
-    - zipp==0.6.0=py_0
-    - zlib==1.2.11=h7b6447c_3
-    - zstd==1.3.7=h0b5b093_0
-
-
-The following NEW packages will be INSTALLED:
-
-  _ipyw_jlab_nb_ext~ pkgs/main/linux-64::_ipyw_jlab_nb_ext_conf-0.1.0-py37_0
-  _libgcc_mutex      pkgs/main/linux-64::_libgcc_mutex-0.1-main
-  alabaster          pkgs/main/linux-64::alabaster-0.7.12-py37_0
-  anaconda           pkgs/main/linux-64::anaconda-2019.10-py37_0
-  anaconda-client    pkgs/main/linux-64::anaconda-client-1.7.2-py37_0
-  anaconda-navigator pkgs/main/linux-64::anaconda-navigator-1.9.7-py37_0
-  anaconda-project   pkgs/main/noarch::anaconda-project-0.8.3-py_0
-  asn1crypto         pkgs/main/linux-64::asn1crypto-1.0.1-py37_0
-  astroid            pkgs/main/linux-64::astroid-2.3.1-py37_0
-  astropy            pkgs/main/linux-64::astropy-3.2.2-py37h7b6447c_0
-  atomicwrites       pkgs/main/linux-64::atomicwrites-1.3.0-py37_1
-  attrs              pkgs/main/noarch::attrs-19.2.0-py_0
-  babel              pkgs/main/noarch::babel-2.7.0-py_0
-  backcall           pkgs/main/linux-64::backcall-0.1.0-py37_0
-  backports          pkgs/main/noarch::backports-1.0-py_2
-  backports.functoo~ pkgs/main/noarch::backports.functools_lru_cache-1.5-py_2
-  backports.os       pkgs/main/linux-64::backports.os-0.1.1-py37_0
-  backports.shutil_~ pkgs/main/linux-64::backports.shutil_get_terminal_size-1.0.0-py37_2
-  backports.tempfile pkgs/main/noarch::backports.tempfile-1.0-py_1
-  backports.weakref  pkgs/main/noarch::backports.weakref-1.0.post1-py_1
-  beautifulsoup4     pkgs/main/linux-64::beautifulsoup4-4.8.0-py37_0
-  bitarray           pkgs/main/linux-64::bitarray-1.0.1-py37h7b6447c_0
-  bkcharts           pkgs/main/linux-64::bkcharts-0.2-py37_0
-  blas               pkgs/main/linux-64::blas-1.0-mkl
-  bleach             pkgs/main/linux-64::bleach-3.1.0-py37_0
-  blosc              pkgs/main/linux-64::blosc-1.16.3-hd408876_0
-  bokeh              pkgs/main/linux-64::bokeh-1.3.4-py37_0
-  boto               pkgs/main/linux-64::boto-2.49.0-py37_0
-  bottleneck         pkgs/main/linux-64::bottleneck-1.2.1-py37h035aef0_1
-  bzip2              pkgs/main/linux-64::bzip2-1.0.8-h7b6447c_0
-  ca-certificates    pkgs/main/linux-64::ca-certificates-2019.8.28-0
-  cairo              pkgs/main/linux-64::cairo-1.14.12-h8948797_3
-  certifi            pkgs/main/linux-64::certifi-2019.9.11-py37_0
-  cffi               pkgs/main/linux-64::cffi-1.12.3-py37h2e261b9_0
-  chardet            pkgs/main/linux-64::chardet-3.0.4-py37_1003
-  click              pkgs/main/linux-64::click-7.0-py37_0
-  cloudpickle        pkgs/main/noarch::cloudpickle-1.2.2-py_0
-  clyent             pkgs/main/linux-64::clyent-1.2.2-py37_1
-  colorama           pkgs/main/linux-64::colorama-0.4.1-py37_0
-  conda              pkgs/main/linux-64::conda-4.7.12-py37_0
-  conda-build        pkgs/main/linux-64::conda-build-3.18.9-py37_3
-  conda-env          pkgs/main/linux-64::conda-env-2.6.0-1
-  conda-package-han~ pkgs/main/linux-64::conda-package-handling-1.6.0-py37h7b6447c_0
-  conda-verify       pkgs/main/noarch::conda-verify-3.4.2-py_1
-  contextlib2        pkgs/main/noarch::contextlib2-0.6.0-py_0
-  cryptography       pkgs/main/linux-64::cryptography-2.7-py37h1ba5d50_0
-  curl               pkgs/main/linux-64::curl-7.65.3-hbc83047_0
-  cycler             pkgs/main/linux-64::cycler-0.10.0-py37_0
-  cython             pkgs/main/linux-64::cython-0.29.13-py37he6710b0_0
-  cytoolz            pkgs/main/linux-64::cytoolz-0.10.0-py37h7b6447c_0
-  dask               pkgs/main/noarch::dask-2.5.2-py_0
-  dask-core          pkgs/main/noarch::dask-core-2.5.2-py_0
-  dbus               pkgs/main/linux-64::dbus-1.13.6-h746ee38_0
-  decorator          pkgs/main/linux-64::decorator-4.4.0-py37_1
-  defusedxml         pkgs/main/noarch::defusedxml-0.6.0-py_0
-  distributed        pkgs/main/noarch::distributed-2.5.2-py_0
-  docutils           pkgs/main/linux-64::docutils-0.15.2-py37_0
-  entrypoints        pkgs/main/linux-64::entrypoints-0.3-py37_0
-  et_xmlfile         pkgs/main/linux-64::et_xmlfile-1.0.1-py37_0
-  expat              pkgs/main/linux-64::expat-2.2.6-he6710b0_0
-  fastcache          pkgs/main/linux-64::fastcache-1.1.0-py37h7b6447c_0
-  filelock           pkgs/main/noarch::filelock-3.0.12-py_0
-  flask              pkgs/main/noarch::flask-1.1.1-py_0
-  fontconfig         pkgs/main/linux-64::fontconfig-2.13.0-h9420a91_0
-  freetype           pkgs/main/linux-64::freetype-2.9.1-h8a8886c_1
-  fribidi            pkgs/main/linux-64::fribidi-1.0.5-h7b6447c_0
-  fsspec             pkgs/main/noarch::fsspec-0.5.2-py_0
-  future             pkgs/main/linux-64::future-0.17.1-py37_0
-  get_terminal_size  pkgs/main/linux-64::get_terminal_size-1.0.0-haa9412d_0
-  gevent             pkgs/main/linux-64::gevent-1.4.0-py37h7b6447c_0
-  glib               pkgs/main/linux-64::glib-2.56.2-hd408876_0
-  glob2              pkgs/main/noarch::glob2-0.7-py_0
-  gmp                pkgs/main/linux-64::gmp-6.1.2-h6c8ec71_1
-  gmpy2              pkgs/main/linux-64::gmpy2-2.0.8-py37h10f8cd9_2
-  graphite2          pkgs/main/linux-64::graphite2-1.3.13-h23475e2_0
-  greenlet           pkgs/main/linux-64::greenlet-0.4.15-py37h7b6447c_0
-  gst-plugins-base   pkgs/main/linux-64::gst-plugins-base-1.14.0-hbbd80ab_1
-  gstreamer          pkgs/main/linux-64::gstreamer-1.14.0-hb453b48_1
-  h5py               pkgs/main/linux-64::h5py-2.9.0-py37h7918eee_0
-  harfbuzz           pkgs/main/linux-64::harfbuzz-1.8.8-hffaf4a1_0
-  hdf5               pkgs/main/linux-64::hdf5-1.10.4-hb1b8bf9_0
-  heapdict           pkgs/main/noarch::heapdict-1.0.1-py_0
-  html5lib           pkgs/main/linux-64::html5lib-1.0.1-py37_0
-  icu                pkgs/main/linux-64::icu-58.2-h9c2bf20_1
-  idna               pkgs/main/linux-64::idna-2.8-py37_0
-  imageio            pkgs/main/linux-64::imageio-2.6.0-py37_0
-  imagesize          pkgs/main/linux-64::imagesize-1.1.0-py37_0
-  importlib_metadata pkgs/main/linux-64::importlib_metadata-0.23-py37_0
-  intel-openmp       pkgs/main/linux-64::intel-openmp-2019.4-243
-  ipykernel          pkgs/main/linux-64::ipykernel-5.1.2-py37h39e3cac_0
-  ipython            pkgs/main/linux-64::ipython-7.8.0-py37h39e3cac_0
-  ipython_genutils   pkgs/main/linux-64::ipython_genutils-0.2.0-py37_0
-  ipywidgets         pkgs/main/noarch::ipywidgets-7.5.1-py_0
-  isort              pkgs/main/linux-64::isort-4.3.21-py37_0
-  itsdangerous       pkgs/main/linux-64::itsdangerous-1.1.0-py37_0
-  jbig               pkgs/main/linux-64::jbig-2.1-hdba287a_0
-  jdcal              pkgs/main/noarch::jdcal-1.4.1-py_0
-  jedi               pkgs/main/linux-64::jedi-0.15.1-py37_0
-  jeepney            pkgs/main/noarch::jeepney-0.4.1-py_0
-  jinja2             pkgs/main/noarch::jinja2-2.10.3-py_0
-  joblib             pkgs/main/linux-64::joblib-0.13.2-py37_0
-  jpeg               pkgs/main/linux-64::jpeg-9b-h024ee3a_2
-  json5              pkgs/main/noarch::json5-0.8.5-py_0
-  jsonschema         pkgs/main/linux-64::jsonschema-3.0.2-py37_0
-  jupyter            pkgs/main/linux-64::jupyter-1.0.0-py37_7
-  jupyter_client     pkgs/main/linux-64::jupyter_client-5.3.3-py37_1
-  jupyter_console    pkgs/main/linux-64::jupyter_console-6.0.0-py37_0
-  jupyter_core       pkgs/main/noarch::jupyter_core-4.5.0-py_0
-  jupyterlab         pkgs/main/noarch::jupyterlab-1.1.4-pyhf63ae98_0
-  jupyterlab_server  pkgs/main/noarch::jupyterlab_server-1.0.6-py_0
-  keyring            pkgs/main/linux-64::keyring-18.0.0-py37_0
-  kiwisolver         pkgs/main/linux-64::kiwisolver-1.1.0-py37he6710b0_0
-  krb5               pkgs/main/linux-64::krb5-1.16.1-h173b8e3_7
-  lazy-object-proxy  pkgs/main/linux-64::lazy-object-proxy-1.4.2-py37h7b6447c_0
-  libarchive         pkgs/main/linux-64::libarchive-3.3.3-h5d8350f_5
-  libcurl            pkgs/main/linux-64::libcurl-7.65.3-h20c2e04_0
-  libedit            pkgs/main/linux-64::libedit-3.1.20181209-hc058e9b_0
-  libffi             pkgs/main/linux-64::libffi-3.2.1-hd88cf55_4
-  libgcc-ng          pkgs/main/linux-64::libgcc-ng-9.1.0-hdf63c60_0
-  libgfortran-ng     pkgs/main/linux-64::libgfortran-ng-7.3.0-hdf63c60_0
-  liblief            pkgs/main/linux-64::liblief-0.9.0-h7725739_2
-  libpng             pkgs/main/linux-64::libpng-1.6.37-hbc83047_0
-  libsodium          pkgs/main/linux-64::libsodium-1.0.16-h1bed415_0
-  libssh2            pkgs/main/linux-64::libssh2-1.8.2-h1ba5d50_0
-  libstdcxx-ng       pkgs/main/linux-64::libstdcxx-ng-9.1.0-hdf63c60_0
-  libtiff            pkgs/main/linux-64::libtiff-4.0.10-h2733197_2
-  libtool            pkgs/main/linux-64::libtool-2.4.6-h7b6447c_5
-  libuuid            pkgs/main/linux-64::libuuid-1.0.3-h1bed415_2
-  libxcb             pkgs/main/linux-64::libxcb-1.13-h1bed415_1
-  libxml2            pkgs/main/linux-64::libxml2-2.9.9-hea5a465_1
-  libxslt            pkgs/main/linux-64::libxslt-1.1.33-h7d1a2b0_0
-  llvmlite           pkgs/main/linux-64::llvmlite-0.29.0-py37hd408876_0
-  locket             pkgs/main/linux-64::locket-0.2.0-py37_1
-  lxml               pkgs/main/linux-64::lxml-4.4.1-py37hefd8a0e_0
-  lz4-c              pkgs/main/linux-64::lz4-c-1.8.1.2-h14c3975_0
-  lzo                pkgs/main/linux-64::lzo-2.10-h49e0be7_2
-  markupsafe         pkgs/main/linux-64::markupsafe-1.1.1-py37h7b6447c_0
-  matplotlib         pkgs/main/linux-64::matplotlib-3.1.1-py37h5429711_0
-  mccabe             pkgs/main/linux-64::mccabe-0.6.1-py37_1
-  mistune            pkgs/main/linux-64::mistune-0.8.4-py37h7b6447c_0
-  mkl                pkgs/main/linux-64::mkl-2019.4-243
-  mkl-service        pkgs/main/linux-64::mkl-service-2.3.0-py37he904b0f_0
-  mkl_fft            pkgs/main/linux-64::mkl_fft-1.0.14-py37ha843d7b_0
-  mkl_random         pkgs/main/linux-64::mkl_random-1.1.0-py37hd6b4f25_0
-  mock               pkgs/main/linux-64::mock-3.0.5-py37_0
-  more-itertools     pkgs/main/linux-64::more-itertools-7.2.0-py37_0
-  mpc                pkgs/main/linux-64::mpc-1.1.0-h10f8cd9_1
-  mpfr               pkgs/main/linux-64::mpfr-4.0.1-hdf1c602_3
-  mpmath             pkgs/main/linux-64::mpmath-1.1.0-py37_0
-  msgpack-python     pkgs/main/linux-64::msgpack-python-0.6.1-py37hfd86e86_1
-  multipledispatch   pkgs/main/linux-64::multipledispatch-0.6.0-py37_0
-  navigator-updater  pkgs/main/linux-64::navigator-updater-0.2.1-py37_0
-  nbconvert          pkgs/main/linux-64::nbconvert-5.6.0-py37_1
-  nbformat           pkgs/main/linux-64::nbformat-4.4.0-py37_0
-  ncurses            pkgs/main/linux-64::ncurses-6.1-he6710b0_1
-  networkx           pkgs/main/noarch::networkx-2.3-py_0
-  nltk               pkgs/main/linux-64::nltk-3.4.5-py37_0
-  nose               pkgs/main/linux-64::nose-1.3.7-py37_2
-  notebook           pkgs/main/linux-64::notebook-6.0.1-py37_0
-  numba              pkgs/main/linux-64::numba-0.45.1-py37h962f231_0
-  numexpr            pkgs/main/linux-64::numexpr-2.7.0-py37h9e4a6bb_0
-  numpy              pkgs/main/linux-64::numpy-1.17.2-py37haad9e8e_0
-  numpy-base         pkgs/main/linux-64::numpy-base-1.17.2-py37hde5b4d6_0
-  numpydoc           pkgs/main/noarch::numpydoc-0.9.1-py_0
-  olefile            pkgs/main/linux-64::olefile-0.46-py37_0
-  openpyxl           pkgs/main/noarch::openpyxl-3.0.0-py_0
-  openssl            pkgs/main/linux-64::openssl-1.1.1d-h7b6447c_2
-  packaging          pkgs/main/noarch::packaging-19.2-py_0
-  pandas             pkgs/main/linux-64::pandas-0.25.1-py37he6710b0_0
-  pandoc             pkgs/main/linux-64::pandoc-2.2.3.2-0
-  pandocfilters      pkgs/main/linux-64::pandocfilters-1.4.2-py37_1
-  pango              pkgs/main/linux-64::pango-1.42.4-h049681c_0
-  parso              pkgs/main/noarch::parso-0.5.1-py_0
-  partd              pkgs/main/noarch::partd-1.0.0-py_0
-  patchelf           pkgs/main/linux-64::patchelf-0.9-he6710b0_3
-  path.py            pkgs/main/noarch::path.py-12.0.1-py_0
-  pathlib2           pkgs/main/linux-64::pathlib2-2.3.5-py37_0
-  patsy              pkgs/main/linux-64::patsy-0.5.1-py37_0
-  pcre               pkgs/main/linux-64::pcre-8.43-he6710b0_0
-  pep8               pkgs/main/linux-64::pep8-1.7.1-py37_0
-  pexpect            pkgs/main/linux-64::pexpect-4.7.0-py37_0
-  pickleshare        pkgs/main/linux-64::pickleshare-0.7.5-py37_0
-  pillow             pkgs/main/linux-64::pillow-6.2.0-py37h34e0f95_0
-  pip                pkgs/main/linux-64::pip-19.2.3-py37_0
-  pixman             pkgs/main/linux-64::pixman-0.38.0-h7b6447c_0
-  pkginfo            pkgs/main/linux-64::pkginfo-1.5.0.1-py37_0
-  pluggy             pkgs/main/linux-64::pluggy-0.13.0-py37_0
-  ply                pkgs/main/linux-64::ply-3.11-py37_0
-  prometheus_client  pkgs/main/noarch::prometheus_client-0.7.1-py_0
-  prompt_toolkit     pkgs/main/noarch::prompt_toolkit-2.0.10-py_0
-  psutil             pkgs/main/linux-64::psutil-5.6.3-py37h7b6447c_0
-  ptyprocess         pkgs/main/linux-64::ptyprocess-0.6.0-py37_0
-  py                 pkgs/main/linux-64::py-1.8.0-py37_0
-  py-lief            pkgs/main/linux-64::py-lief-0.9.0-py37h7725739_2
-  pycodestyle        pkgs/main/linux-64::pycodestyle-2.5.0-py37_0
-  pycosat            pkgs/main/linux-64::pycosat-0.6.3-py37h14c3975_0
-  pycparser          pkgs/main/linux-64::pycparser-2.19-py37_0
-  pycrypto           pkgs/main/linux-64::pycrypto-2.6.1-py37h14c3975_9
-  pycurl             pkgs/main/linux-64::pycurl-7.43.0.3-py37h1ba5d50_0
-  pyflakes           pkgs/main/linux-64::pyflakes-2.1.1-py37_0
-  pygments           pkgs/main/noarch::pygments-2.4.2-py_0
-  pylint             pkgs/main/linux-64::pylint-2.4.2-py37_0
-  pyodbc             pkgs/main/linux-64::pyodbc-4.0.27-py37he6710b0_0
-  pyopenssl          pkgs/main/linux-64::pyopenssl-19.0.0-py37_0
-  pyparsing          pkgs/main/noarch::pyparsing-2.4.2-py_0
-  pyqt               pkgs/main/linux-64::pyqt-5.9.2-py37h05f1152_2
-  pyrsistent         pkgs/main/linux-64::pyrsistent-0.15.4-py37h7b6447c_0
-  pysocks            pkgs/main/linux-64::pysocks-1.7.1-py37_0
-  pytables           pkgs/main/linux-64::pytables-3.5.2-py37h71ec239_1
-  pytest             pkgs/main/linux-64::pytest-5.2.1-py37_0
-  pytest-arraydiff   pkgs/main/linux-64::pytest-arraydiff-0.3-py37h39e3cac_0
-  pytest-astropy     pkgs/main/linux-64::pytest-astropy-0.5.0-py37_0
-  pytest-doctestplus pkgs/main/noarch::pytest-doctestplus-0.4.0-py_0
-  pytest-openfiles   pkgs/main/noarch::pytest-openfiles-0.4.0-py_0
-  pytest-remotedata  pkgs/main/linux-64::pytest-remotedata-0.3.2-py37_0
-  python             pkgs/main/linux-64::python-3.7.4-h265db76_1
-  python-dateutil    pkgs/main/linux-64::python-dateutil-2.8.0-py37_0
-  python-libarchive~ pkgs/main/linux-64::python-libarchive-c-2.8-py37_13
-  pytz               pkgs/main/noarch::pytz-2019.3-py_0
-  pywavelets         pkgs/main/linux-64::pywavelets-1.0.3-py37hdd07704_1
-  pyyaml             pkgs/main/linux-64::pyyaml-5.1.2-py37h7b6447c_0
-  pyzmq              pkgs/main/linux-64::pyzmq-18.1.0-py37he6710b0_0
-  qt                 pkgs/main/linux-64::qt-5.9.7-h5867ecd_1
-  qtawesome          pkgs/main/noarch::qtawesome-0.6.0-py_0
-  qtconsole          pkgs/main/noarch::qtconsole-4.5.5-py_0
-  qtpy               pkgs/main/noarch::qtpy-1.9.0-py_0
-  readline           pkgs/main/linux-64::readline-7.0-h7b6447c_5
-  requests           pkgs/main/linux-64::requests-2.22.0-py37_0
-  ripgrep            pkgs/main/linux-64::ripgrep-0.10.0-hc07d326_0
-  rope               pkgs/main/noarch::rope-0.14.0-py_0
-  ruamel_yaml        pkgs/main/linux-64::ruamel_yaml-0.15.46-py37h14c3975_0
-  scikit-image       pkgs/main/linux-64::scikit-image-0.15.0-py37he6710b0_0
-  scikit-learn       pkgs/main/linux-64::scikit-learn-0.21.3-py37hd81dba3_0
-  scipy              pkgs/main/linux-64::scipy-1.3.1-py37h7c811a0_0
-  seaborn            pkgs/main/linux-64::seaborn-0.9.0-py37_0
-  secretstorage      pkgs/main/linux-64::secretstorage-3.1.1-py37_0
-  send2trash         pkgs/main/linux-64::send2trash-1.5.0-py37_0
-  setuptools         pkgs/main/linux-64::setuptools-41.4.0-py37_0
-  simplegeneric      pkgs/main/linux-64::simplegeneric-0.8.1-py37_2
-  singledispatch     pkgs/main/linux-64::singledispatch-3.4.0.3-py37_0
-  sip                pkgs/main/linux-64::sip-4.19.8-py37hf484d3e_0
-  six                pkgs/main/linux-64::six-1.12.0-py37_0
-  snappy             pkgs/main/linux-64::snappy-1.1.7-hbae5bb6_3
-  snowballstemmer    pkgs/main/noarch::snowballstemmer-2.0.0-py_0
-  sortedcollections  pkgs/main/linux-64::sortedcollections-1.1.2-py37_0
-  sortedcontainers   pkgs/main/linux-64::sortedcontainers-2.1.0-py37_0
-  soupsieve          pkgs/main/linux-64::soupsieve-1.9.3-py37_0
-  sphinx             pkgs/main/noarch::sphinx-2.2.0-py_0
-  sphinxcontrib      pkgs/main/linux-64::sphinxcontrib-1.0-py37_1
-  sphinxcontrib-app~ pkgs/main/noarch::sphinxcontrib-applehelp-1.0.1-py_0
-  sphinxcontrib-dev~ pkgs/main/noarch::sphinxcontrib-devhelp-1.0.1-py_0
-  sphinxcontrib-htm~ pkgs/main/noarch::sphinxcontrib-htmlhelp-1.0.2-py_0
-  sphinxcontrib-jsm~ pkgs/main/noarch::sphinxcontrib-jsmath-1.0.1-py_0
-  sphinxcontrib-qth~ pkgs/main/noarch::sphinxcontrib-qthelp-1.0.2-py_0
-  sphinxcontrib-ser~ pkgs/main/noarch::sphinxcontrib-serializinghtml-1.1.3-py_0
-  sphinxcontrib-web~ pkgs/main/noarch::sphinxcontrib-websupport-1.1.2-py_0
-  spyder             pkgs/main/linux-64::spyder-3.3.6-py37_0
-  spyder-kernels     pkgs/main/linux-64::spyder-kernels-0.5.2-py37_0
-  sqlalchemy         pkgs/main/linux-64::sqlalchemy-1.3.9-py37h7b6447c_0
-  sqlite             pkgs/main/linux-64::sqlite-3.30.0-h7b6447c_0
-  statsmodels        pkgs/main/linux-64::statsmodels-0.10.1-py37hdd07704_0
-  sympy              pkgs/main/linux-64::sympy-1.4-py37_0
-  tbb                pkgs/main/linux-64::tbb-2019.4-hfd86e86_0
-  tblib              pkgs/main/noarch::tblib-1.4.0-py_0
-  terminado          pkgs/main/linux-64::terminado-0.8.2-py37_0
-  testpath           pkgs/main/linux-64::testpath-0.4.2-py37_0
-  tk                 pkgs/main/linux-64::tk-8.6.8-hbc83047_0
-  toolz              pkgs/main/noarch::toolz-0.10.0-py_0
-  tornado            pkgs/main/linux-64::tornado-6.0.3-py37h7b6447c_0
-  tqdm               pkgs/main/noarch::tqdm-4.36.1-py_0
-  traitlets          pkgs/main/linux-64::traitlets-4.3.3-py37_0
-  unicodecsv         pkgs/main/linux-64::unicodecsv-0.14.1-py37_0
-  unixodbc           pkgs/main/linux-64::unixodbc-2.3.7-h14c3975_0
-  urllib3            pkgs/main/linux-64::urllib3-1.24.2-py37_0
-  wcwidth            pkgs/main/linux-64::wcwidth-0.1.7-py37_0
-  webencodings       pkgs/main/linux-64::webencodings-0.5.1-py37_1
-  werkzeug           pkgs/main/noarch::werkzeug-0.16.0-py_0
-  wheel              pkgs/main/linux-64::wheel-0.33.6-py37_0
-  widgetsnbextension pkgs/main/linux-64::widgetsnbextension-3.5.1-py37_0
-  wrapt              pkgs/main/linux-64::wrapt-1.11.2-py37h7b6447c_0
-  wurlitzer          pkgs/main/linux-64::wurlitzer-1.0.3-py37_0
-  xlrd               pkgs/main/linux-64::xlrd-1.2.0-py37_0
-  xlsxwriter         pkgs/main/noarch::xlsxwriter-1.2.1-py_0
-  xlwt               pkgs/main/linux-64::xlwt-1.3.0-py37_0
-  xz                 pkgs/main/linux-64::xz-5.2.4-h14c3975_4
-  yaml               pkgs/main/linux-64::yaml-0.1.7-had09818_2
-  zeromq             pkgs/main/linux-64::zeromq-4.3.1-he6710b0_3
-  zict               pkgs/main/noarch::zict-1.0.0-py_0
-  zipp               pkgs/main/noarch::zipp-0.6.0-py_0
-  zlib               pkgs/main/linux-64::zlib-1.2.11-h7b6447c_3
-  zstd               pkgs/main/linux-64::zstd-1.3.7-h0b5b093_0
-
-
-Preparing transaction: ...working... done
-Executing transaction: ...working... done
-installation finished.
-Aborting.
-Building anaconda
-Step 1/11 : FROM debian:latest
- ---> 67e34c1c9477
-Step 2/11 : ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
- ---> Using cache
- ---> 73021ce7352f
-Step 3/11 : ENV PATH /opt/conda/bin:$PATH
- ---> Using cache
- ---> a32f8369486e
-Step 4/11 : RUN apt-get update --fix-missing && apt-get install -y wget bzip2 ca-certificates     libglib2.0-0 libxext6 libsm6 libxrender1     git mercurial subversion
- ---> Using cache
- ---> 08afce3cee4a
-Step 5/11 : RUN wget --quiet https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh -O ~/anaconda.sh &&     /bin/bash ~/anaconda.sh -b -p /opt/conda &&     rm ~/anaconda.sh &&     ln -s /opt/conda/etc/profile.d/conda.sh /etc/profile.d/conda.sh &&     echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc &&     echo "conda activate base" >> ~/.bashrc
- ---> Using cache
- ---> cc71dee7f1c4
-Step 6/11 : RUN apt-get install -y curl grep sed dpkg &&     TINI_VERSION=`curl https://github.com/krallin/tini/releases/latest | grep -o "/v.*\"" | sed 's:^..\(.*\).$:\1:'` &&     curl -L "https://github.com/krallin/tini/releases/download/v${TINI_VERSION}/tini_${TINI_VERSION}.deb" > tini.deb &&     dpkg -i tini.deb &&     rm tini.deb &&     apt-get clean
- ---> Running in de9d99db9e61
-Reading package lists...
-Building dependency tree...
-Reading state information...
-dpkg is already the newest version (1.19.7).
-dpkg set to manually installed.
-grep is already the newest version (3.3-1).
-grep set to manually installed.
-sed is already the newest version (4.7-1).
-sed set to manually installed.
-The following additional packages will be installed:
-  libcurl4
-The following NEW packages will be installed:
-  curl libcurl4
-0 upgraded, 2 newly installed, 0 to remove and 0 not upgraded.
-Need to get 596 kB of archives.
-After this operation, 1123 kB of additional disk space will be used.
-Get:1 http://deb.debian.org/debian buster/main amd64 libcurl4 amd64 7.64.0-4 [332 kB]
-Get:2 http://deb.debian.org/debian buster/main amd64 curl amd64 7.64.0-4 [264 kB]
-[91mdebconf: delaying package configuration, since apt-utils is not installed
-[0mFetched 596 kB in 0s (2479 kB/s)
-Selecting previously unselected package libcurl4:amd64.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 12781 files and directories currently installed.)
-Preparing to unpack .../libcurl4_7.64.0-4_amd64.deb ...
-Unpacking libcurl4:amd64 (7.64.0-4) ...
-Selecting previously unselected package curl.
-Preparing to unpack .../curl_7.64.0-4_amd64.deb ...
-Unpacking curl (7.64.0-4) ...
-Setting up libcurl4:amd64 (7.64.0-4) ...
-Setting up curl (7.64.0-4) ...
-Processing triggers for libc-bin (2.28-10) ...
-[91m  % T[0m[91mo[0m[91mtal [0m[91m   [0m[91m%[0m[91m R[0m[91me[0m[91mc[0m[91meived [0m[91m%[0m[91m Xf[0m[91me[0m[91mr[0m[91md  [0m[91mA[0m[91mv[0m[91me[0m[91mr[0m[91mage Speed  [0m[91m Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0[0m[91m100   118    0   118    0     0    572      0 --:--:-- --:--:-- --:--:--   575
-[0m[91m  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Tot[0m[91mal   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0[0m[91m  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0[0m[91m100   605    0   605    0     0   3805      0 --:--:-- --:--:-- --:--:--  3781
-[0m[91m[0m[91m100  364k  [0m[91m100  [0m[91m36[0m[91m4k [0m[91m   0[0m[91m  [0m[91m [0m[91m  0   825k      0 --:--:-- --:--:-- --:--:--  825k
-[0mSelecting previously unselected package tini.
-(Reading database ... 12798 files and directories currently installed.)
-Preparing to unpack tini.deb ...
-Unpacking tini (0.18.0) ...
-Setting up tini (0.18.0) ...
-Removing intermediate container de9d99db9e61
- ---> 8f17ba5d9dcc
-Step 7/11 : RUN useradd -ms /bin/bash monty
- ---> Running in a22d62810026
-Removing intermediate container a22d62810026
- ---> f39688d09f1b
-Step 8/11 : USER monty
- ---> Running in 2e1d92d35cd1
-Removing intermediate container 2e1d92d35cd1
- ---> 789b5a0f928f
-Step 9/11 : WORKDIR /home/monty
- ---> Running in d52708587b63
-Removing intermediate container d52708587b63
- ---> b51b2aefab77
-Step 10/11 : ENTRYPOINT [ "/usr/bin/tini", "--" ]
- ---> Running in 06b8b4674086
-Removing intermediate container 06b8b4674086
- ---> 6180029ac440
-Step 11/11 : CMD [ "jupyter", "notebook", "--ip=0.0.0.0", "--port=3000", "--no-browser", "--notebook-dir=/usr/src/"]
- ---> Running in 7421e93fb79f
-Removing intermediate container 7421e93fb79f
- ---> e52acc1108cc
-Successfully built e52acc1108cc
-Successfully tagged anaconda:latest
-Creating anaconda-python-3.7 ... 
-[1A[2KCreating anaconda-python-3.7 ... [32mdone[0m[1BCreating network "anaconda-env_default" with the default driver
-Building anaconda
-Step 1/11 : FROM debian:latest
- ---> 67e34c1c9477
-Step 2/11 : ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
- ---> Using cache
- ---> 73021ce7352f
-Step 3/11 : ENV PATH /opt/conda/bin:$PATH
- ---> Using cache
- ---> a32f8369486e
-Step 4/11 : RUN apt-get update --fix-missing && apt-get install -y wget bzip2 ca-certificates     libglib2.0-0 libxext6 libsm6 libxrender1     git mercurial subversion
- ---> Using cache
- ---> 08afce3cee4a
-Step 5/11 : RUN wget --quiet https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh -O ~/anaconda.sh &&     /bin/bash ~/anaconda.sh -b -p /opt/conda &&     rm ~/anaconda.sh &&     ln -s /opt/conda/etc/profile.d/conda.sh /etc/profile.d/conda.sh &&     echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc &&     echo "conda activate base" >> ~/.bashrc
- ---> Using cache
- ---> cc71dee7f1c4
-Step 6/11 : RUN apt-get install -y curl grep sed dpkg &&     TINI_VERSION=`curl https://github.com/krallin/tini/releases/latest | grep -o "/v.*\"" | sed 's:^..\(.*\).$:\1:'` &&     curl -L "https://github.com/krallin/tini/releases/download/v${TINI_VERSION}/tini_${TINI_VERSION}.deb" > tini.deb &&     dpkg -i tini.deb &&     rm tini.deb &&     apt-get clean
- ---> Using cache
- ---> 8f17ba5d9dcc
-Step 7/11 : RUN useradd -ms /bin/bash monty
- ---> Using cache
- ---> f39688d09f1b
-Step 8/11 : USER monty
- ---> Using cache
- ---> 789b5a0f928f
-Step 9/11 : WORKDIR /home/monty
- ---> Using cache
- ---> b51b2aefab77
-Step 10/11 : ENTRYPOINT [ "/usr/bin/tini", "--" ]
- ---> Using cache
- ---> 6180029ac440
-Step 11/11 : CMD [ "jupyter", "notebook", "--ip=0.0.0.0", "--port=3000", "--no-browser", "--notebook-dir=/usr/src/"]
- ---> Using cache
- ---> e52acc1108cc
-Successfully built e52acc1108cc
-Successfully tagged anaconda:latest
-Creating anaconda-python-3.7 ... 
-[1A[2KCreating anaconda-python-3.7 ... [32mdone[0m[1BCreating network "anaconda-env_default" with the default driver
-Building anaconda
-Step 1/11 : FROM debian:latest
- ---> 67e34c1c9477
-Step 2/11 : ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
- ---> Using cache
- ---> 73021ce7352f
-Step 3/11 : ENV PATH /opt/conda/bin:$PATH
- ---> Using cache
- ---> a32f8369486e
-Step 4/11 : RUN apt-get update --fix-missing && apt-get install -y wget bzip2 ca-certificates     libglib2.0-0 libxext6 libsm6 libxrender1     git mercurial subversion
- ---> Using cache
- ---> 08afce3cee4a
-Step 5/11 : RUN wget --quiet https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh -O ~/anaconda.sh &&     /bin/bash ~/anaconda.sh -b -p /opt/conda &&     rm ~/anaconda.sh &&     ln -s /opt/conda/etc/profile.d/conda.sh /etc/profile.d/conda.sh &&     echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc &&     echo "conda activate base" >> ~/.bashrc
- ---> Using cache
- ---> cc71dee7f1c4
-Step 6/11 : RUN apt-get install -y curl grep sed dpkg &&     TINI_VERSION=`curl https://github.com/krallin/tini/releases/latest | grep -o "/v.*\"" | sed 's:^..\(.*\).$:\1:'` &&     curl -L "https://github.com/krallin/tini/releases/download/v${TINI_VERSION}/tini_${TINI_VERSION}.deb" > tini.deb &&     dpkg -i tini.deb &&     rm tini.deb &&     apt-get clean
- ---> Using cache
- ---> 8f17ba5d9dcc
-Step 7/11 : RUN useradd -ms /bin/bash monty
- ---> Using cache
- ---> f39688d09f1b
-Step 8/11 : USER monty
- ---> Using cache
- ---> 789b5a0f928f
-Step 9/11 : WORKDIR /home/monty
- ---> Using cache
- ---> b51b2aefab77
-Step 10/11 : ENTRYPOINT [ "/usr/bin/tini", "--" ]
- ---> Using cache
- ---> 6180029ac440
-Step 11/11 : CMD [ "jupyter", "notebook", "--ip=0.0.0.0", "--port=3000", "--no-browser", "--notebook-dir=/usr/src/"]
- ---> Using cache
- ---> e52acc1108cc
-Successfully built e52acc1108cc
-Successfully tagged anaconda:latest
-Creating anaconda-python-3.7 ... 
-[1A[2KCreating anaconda-python-3.7 ... [32mdone[0m[1BCreating network "anaconda-env_default" with the default driver
-Building anaconda
-Step 1/11 : FROM debian:latest
- ---> 67e34c1c9477
-Step 2/11 : ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
- ---> Using cache
- ---> 73021ce7352f
-Step 3/11 : ENV PATH /opt/conda/bin:$PATH
- ---> Using cache
- ---> a32f8369486e
-Step 4/11 : RUN apt-get update --fix-missing && apt-get install -y wget bzip2 ca-certificates     libglib2.0-0 libxext6 libsm6 libxrender1     git mercurial subversion
- ---> Using cache
- ---> 08afce3cee4a
-Step 5/11 : RUN wget --quiet https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh -O ~/anaconda.sh &&     /bin/bash ~/anaconda.sh -b -p /opt/conda &&     rm ~/anaconda.sh &&     ln -s /opt/conda/etc/profile.d/conda.sh /etc/profile.d/conda.sh &&     echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc &&     echo "conda activate base" >> ~/.bashrc
- ---> Using cache
- ---> cc71dee7f1c4
-Step 6/11 : RUN apt-get install -y curl grep sed dpkg &&     TINI_VERSION=`curl https://github.com/krallin/tini/releases/latest | grep -o "/v.*\"" | sed 's:^..\(.*\).$:\1:'` &&     curl -L "https://github.com/krallin/tini/releases/download/v${TINI_VERSION}/tini_${TINI_VERSION}.deb" > tini.deb &&     dpkg -i tini.deb &&     rm tini.deb &&     apt-get clean
- ---> Using cache
- ---> 8f17ba5d9dcc
-Step 7/11 : RUN useradd -ms /bin/bash monty
- ---> Using cache
- ---> f39688d09f1b
-Step 8/11 : USER monty
- ---> Using cache
- ---> 789b5a0f928f
-Step 9/11 : WORKDIR /home/monty
- ---> Using cache
- ---> b51b2aefab77
-Step 10/11 : ENTRYPOINT [ "/usr/bin/tini", "--" ]
- ---> Using cache
- ---> 6180029ac440
-Step 11/11 : CMD [ "jupyter", "notebook", "--ip=0.0.0.0", "--port=3000", "--no-browser", "--notebook-dir=/usr/src/"]
- ---> Using cache
- ---> e52acc1108cc
-Successfully built e52acc1108cc
-Successfully tagged anaconda:latest
-Creating anaconda-python-3.7 ... 
-[1A[2KCreating anaconda-python-3.7 ... [32mdone[0m[1BCreating network "anaconda-env_default" with the default driver
-Building anaconda
-Step 1/11 : FROM debian:latest
- ---> 67e34c1c9477
-Step 2/11 : ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
- ---> Using cache
- ---> 73021ce7352f
-Step 3/11 : ENV PATH /opt/conda/bin:$PATH
- ---> Using cache
- ---> a32f8369486e
-Step 4/11 : RUN apt-get update --fix-missing && apt-get install -y wget bzip2 ca-certificates     libglib2.0-0 libxext6 libsm6 libxrender1     git mercurial subversion
- ---> Using cache
- ---> 08afce3cee4a
-Step 5/11 : RUN wget --quiet https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh -O ~/anaconda.sh &&     /bin/bash ~/anaconda.sh -b -p /opt/conda &&     rm ~/anaconda.sh &&     ln -s /opt/conda/etc/profile.d/conda.sh /etc/profile.d/conda.sh &&     echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc &&     echo "conda activate base" >> ~/.bashrc
- ---> Using cache
- ---> cc71dee7f1c4
-Step 6/11 : RUN apt-get install -y curl grep sed dpkg &&     TINI_VERSION=`curl https://github.com/krallin/tini/releases/latest | grep -o "/v.*\"" | sed 's:^..\(.*\).$:\1:'` &&     curl -L "https://github.com/krallin/tini/releases/download/v${TINI_VERSION}/tini_${TINI_VERSION}.deb" > tini.deb &&     dpkg -i tini.deb &&     rm tini.deb &&     apt-get clean
- ---> Using cache
- ---> 8f17ba5d9dcc
-Step 7/11 : RUN useradd -ms /bin/bash monty
- ---> Using cache
- ---> f39688d09f1b
-Step 8/11 : USER monty
- ---> Using cache
- ---> 789b5a0f928f
-Step 9/11 : WORKDIR /home/monty
- ---> Using cache
- ---> b51b2aefab77
-Step 10/11 : ENTRYPOINT [ "/usr/bin/tini", "--" ]
- ---> Using cache
- ---> 6180029ac440
-Step 11/11 : CMD [ "jupyter", "notebook", "--ip=0.0.0.0", "--port=3000", "--no-browser", "--notebook-dir=/usr/src/", "--allow-root"]
- ---> Running in ca44f5341f63
-Removing intermediate container ca44f5341f63
- ---> 33d475526c6f
-Successfully built 33d475526c6f
-Successfully tagged anaconda:latest
-Creating anaconda-python-3.7 ... 
-[1A[2KCreating anaconda-python-3.7 ... [32mdone[0m[1BCreating network "anaconda-env_default" with the default driver
-Building anaconda
-Step 1/11 : FROM debian:latest
- ---> 67e34c1c9477
-Step 2/11 : ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
- ---> Using cache
- ---> 73021ce7352f
-Step 3/11 : ENV PATH /opt/conda/bin:$PATH
- ---> Using cache
- ---> a32f8369486e
-Step 4/11 : RUN apt-get update --fix-missing && apt-get install -y wget bzip2 ca-certificates     libglib2.0-0 libxext6 libsm6 libxrender1     git mercurial subversion
- ---> Using cache
- ---> 08afce3cee4a
-Step 5/11 : RUN wget --quiet https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh -O ~/anaconda.sh &&     /bin/bash ~/anaconda.sh -b -p /opt/conda &&     rm ~/anaconda.sh &&     ln -s /opt/conda/etc/profile.d/conda.sh /etc/profile.d/conda.sh &&     echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc &&     echo "conda activate base" >> ~/.bashrc
- ---> Using cache
- ---> cc71dee7f1c4
-Step 6/11 : RUN apt-get install -y curl grep sed dpkg &&     TINI_VERSION=`curl https://github.com/krallin/tini/releases/latest | grep -o "/v.*\"" | sed 's:^..\(.*\).$:\1:'` &&     curl -L "https://github.com/krallin/tini/releases/download/v${TINI_VERSION}/tini_${TINI_VERSION}.deb" > tini.deb &&     dpkg -i tini.deb &&     rm tini.deb &&     apt-get clean
- ---> Using cache
- ---> 8f17ba5d9dcc
-Step 7/11 : RUN useradd -ms /bin/bash monty
- ---> Using cache
- ---> f39688d09f1b
-Step 8/11 : USER monty
- ---> Using cache
- ---> 789b5a0f928f
-Step 9/11 : WORKDIR /home/monty
- ---> Using cache
- ---> b51b2aefab77
-Step 10/11 : ENTRYPOINT [ "/usr/bin/tini", "--" ]
- ---> Using cache
- ---> 6180029ac440
-Step 11/11 : CMD [ "jupyter", "notebook", "--ip=0.0.0.0", "--port=3000", "--no-browser", "--notebook-dir=/usr/src/"]
- ---> Using cache
- ---> e52acc1108cc
-Successfully built e52acc1108cc
-Successfully tagged anaconda:latest
-Creating anaconda-python-3.7 ... 
-[1A[2KCreating anaconda-python-3.7 ... [32mdone[0m[1BCreating network "anaconda-env_default" with the default driver
-Building anaconda
-Step 1/11 : FROM debian:latest
- ---> 67e34c1c9477
-Step 2/11 : ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
- ---> Using cache
- ---> 73021ce7352f
-Step 3/11 : ENV PATH /opt/conda/bin:$PATH
- ---> Using cache
- ---> a32f8369486e
-Step 4/11 : RUN apt-get update --fix-missing && apt-get install -y wget bzip2 ca-certificates     libglib2.0-0 libxext6 libsm6 libxrender1     git mercurial subversion
- ---> Using cache
- ---> 08afce3cee4a
-Step 5/11 : RUN wget --quiet https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh -O ~/anaconda.sh &&     /bin/bash ~/anaconda.sh -b -p /opt/conda &&     rm ~/anaconda.sh &&     ln -s /opt/conda/etc/profile.d/conda.sh /etc/profile.d/conda.sh &&     echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc &&     echo "conda activate base" >> ~/.bashrc
- ---> Using cache
- ---> cc71dee7f1c4
-Step 6/11 : RUN apt-get install -y curl grep sed dpkg &&     TINI_VERSION=`curl https://github.com/krallin/tini/releases/latest | grep -o "/v.*\"" | sed 's:^..\(.*\).$:\1:'` &&     curl -L "https://github.com/krallin/tini/releases/download/v${TINI_VERSION}/tini_${TINI_VERSION}.deb" > tini.deb &&     dpkg -i tini.deb &&     rm tini.deb &&     apt-get clean
- ---> Using cache
- ---> 8f17ba5d9dcc
-Step 7/11 : RUN useradd -ms /bin/bash monty
- ---> Using cache
- ---> f39688d09f1b
-Step 8/11 : USER monty
- ---> Using cache
- ---> 789b5a0f928f
-Step 9/11 : WORKDIR /home/monty
- ---> Using cache
- ---> b51b2aefab77
-Step 10/11 : ENTRYPOINT [ "/usr/bin/tini", "--" ]
- ---> Using cache
- ---> 6180029ac440
-Step 11/11 : CMD [ "jupyter", "notebook", "--ip=0.0.0.0", "--port=3000", "--no-browser", "--notebook-dir=/home/monty/"]
- ---> Running in be5dd7bf822d
-Removing intermediate container be5dd7bf822d
- ---> 23ddcd90dec2
-Successfully built 23ddcd90dec2
-Successfully tagged anaconda:latest
-Creating anaconda-python-3.7 ... 
-[1A[2KCreating anaconda-python-3.7 ... [32mdone[0m[1BCreating network "anaconda-env_default" with the default driver
-Building anaconda
-Step 1/11 : FROM debian:latest
- ---> 67e34c1c9477
-Step 2/11 : ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
- ---> Using cache
- ---> 73021ce7352f
-Step 3/11 : ENV PATH /opt/conda/bin:$PATH
- ---> Using cache
- ---> a32f8369486e
-Step 4/11 : RUN apt-get update --fix-missing && apt-get install -y wget bzip2 ca-certificates     libglib2.0-0 libxext6 libsm6 libxrender1     git mercurial subversion
- ---> Using cache
- ---> 08afce3cee4a
-Step 5/11 : RUN wget --quiet https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh -O ~/anaconda.sh &&     /bin/bash ~/anaconda.sh -b -p /opt/conda &&     rm ~/anaconda.sh &&     ln -s /opt/conda/etc/profile.d/conda.sh /etc/profile.d/conda.sh &&     echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc &&     echo "conda activate base" >> ~/.bashrc
- ---> Using cache
- ---> cc71dee7f1c4
-Step 6/11 : RUN apt-get install -y curl grep sed dpkg &&     TINI_VERSION=`curl https://github.com/krallin/tini/releases/latest | grep -o "/v.*\"" | sed 's:^..\(.*\).$:\1:'` &&     curl -L "https://github.com/krallin/tini/releases/download/v${TINI_VERSION}/tini_${TINI_VERSION}.deb" > tini.deb &&     dpkg -i tini.deb &&     rm tini.deb &&     apt-get clean
- ---> Using cache
- ---> 8f17ba5d9dcc
-Step 7/11 : RUN useradd -ms /bin/bash monty
- ---> Using cache
- ---> f39688d09f1b
-Step 8/11 : USER monty
- ---> Using cache
- ---> 789b5a0f928f
-Step 9/11 : WORKDIR /home/monty
- ---> Using cache
- ---> b51b2aefab77
-Step 10/11 : ENTRYPOINT [ "/usr/bin/tini", "--" ]
- ---> Using cache
- ---> 6180029ac440
-Step 11/11 : CMD [ "jupyter", "notebook", "--ip=0.0.0.0", "--port=3000", "--no-browser", "--notebook-dir=/home/monty/"]
- ---> Using cache
- ---> 23ddcd90dec2
-Successfully built 23ddcd90dec2
-Successfully tagged anaconda:latest
-Creating anaconda-python-3.7 ... 
-[1A[2KCreating anaconda-python-3.7 ... [32mdone[0m[1BCreating network "anaconda-env_default" with the default driver
-Building anaconda
-Step 1/11 : FROM debian:latest
- ---> 67e34c1c9477
-Step 2/11 : ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
- ---> Using cache
- ---> 73021ce7352f
-Step 3/11 : ENV PATH /opt/conda/bin:$PATH
- ---> Using cache
- ---> a32f8369486e
-Step 4/11 : RUN apt-get update --fix-missing && apt-get install -y wget bzip2 ca-certificates     libglib2.0-0 libxext6 libsm6 libxrender1     git mercurial subversion
- ---> Using cache
- ---> 08afce3cee4a
-Step 5/11 : RUN wget --quiet https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh -O ~/anaconda.sh &&     /bin/bash ~/anaconda.sh -b -p /opt/conda &&     rm ~/anaconda.sh &&     ln -s /opt/conda/etc/profile.d/conda.sh /etc/profile.d/conda.sh &&     echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc &&     echo "conda activate base" >> ~/.bashrc
- ---> Using cache
- ---> cc71dee7f1c4
-Step 6/11 : RUN apt-get install -y curl grep sed dpkg &&     TINI_VERSION=`curl https://github.com/krallin/tini/releases/latest | grep -o "/v.*\"" | sed 's:^..\(.*\).$:\1:'` &&     curl -L "https://github.com/krallin/tini/releases/download/v${TINI_VERSION}/tini_${TINI_VERSION}.deb" > tini.deb &&     dpkg -i tini.deb &&     rm tini.deb &&     apt-get clean
- ---> Using cache
- ---> 8f17ba5d9dcc
-Step 7/11 : RUN useradd -ms /bin/bash monty
- ---> Using cache
- ---> f39688d09f1b
-Step 8/11 : USER monty
- ---> Using cache
- ---> 789b5a0f928f
-Step 9/11 : WORKDIR /home/monty
- ---> Using cache
- ---> b51b2aefab77
-Step 10/11 : ENTRYPOINT [ "/usr/bin/tini", "--" ]
- ---> Using cache
- ---> 6180029ac440
-Step 11/11 : CMD [ "jupyter", "notebook", "--ip=0.0.0.0", "--port=3000", "--no-browser", "--notebook-dir=/home/monty/"]
- ---> Using cache
- ---> 23ddcd90dec2
-Successfully built 23ddcd90dec2
-Successfully tagged anaconda:latest
-Creating anaconda-python-3.7 ... 
-[1A[2KCreating anaconda-python-3.7 ... [32mdone[0m[1B
