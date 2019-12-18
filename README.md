@@ -25,6 +25,8 @@ As we work through various features of the language and am experimenting with ne
 
 ## Resources for Learning Technologies
 - Python
+    - Pandas
+        - [Ritchieng: Selecting Muliple Rows and Columns](https://www.ritchieng.com/pandas-selecting-multiple-rows-and-columns/)
 - JavaScript
 - Docker
 - MySQL
