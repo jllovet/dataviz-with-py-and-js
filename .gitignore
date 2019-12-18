@@ -3,3 +3,4 @@ experiments/.env
 exercises/.env
 project/.env
 experiments/anaconda-env/logs/*
+experiments/anaconda-env/app/notebooks/.ipynb_checkpoints/*
