@@ -1,0 +1,6 @@
+notes*
+experiments/.env
+exercises/.env
+project/.env
+experiments/docker-anaconda-env/logs/*
+experiments/docker-anaconda-env/app/notebooks/.ipynb_checkpoints/*
