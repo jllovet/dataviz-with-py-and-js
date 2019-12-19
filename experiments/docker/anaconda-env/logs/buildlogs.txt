@@ -1,0 +1,75 @@
+Creating network "anaconda-env_default" with the default driver
+Building anaconda
+Step 1/11 : FROM debian:latest
+ ---> 67e34c1c9477
+Step 2/11 : ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
+ ---> Using cache
+ ---> 73021ce7352f
+Step 3/11 : ENV PATH /opt/conda/bin:$PATH
+ ---> Using cache
+ ---> a32f8369486e
+Step 4/11 : RUN apt-get update --fix-missing && apt-get install -y wget bzip2 ca-certificates     libglib2.0-0 libxext6 libsm6 libxrender1     git mercurial subversion
+ ---> Using cache
+ ---> 08afce3cee4a
+Step 5/11 : RUN wget --quiet https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh -O ~/anaconda.sh &&     /bin/bash ~/anaconda.sh -b -p /opt/conda &&     rm ~/anaconda.sh &&     ln -s /opt/conda/etc/profile.d/conda.sh /etc/profile.d/conda.sh &&     echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc &&     echo "conda activate base" >> ~/.bashrc
+ ---> Using cache
+ ---> cc71dee7f1c4
+Step 6/11 : RUN apt-get install -y curl grep sed dpkg &&     TINI_VERSION=`curl https://github.com/krallin/tini/releases/latest | grep -o "/v.*\"" | sed 's:^..\(.*\).$:\1:'` &&     curl -L "https://github.com/krallin/tini/releases/download/v${TINI_VERSION}/tini_${TINI_VERSION}.deb" > tini.deb &&     dpkg -i tini.deb &&     rm tini.deb &&     apt-get clean
+ ---> Using cache
+ ---> 8f17ba5d9dcc
+Step 7/11 : RUN useradd -ms /bin/bash monty
+ ---> Using cache
+ ---> f39688d09f1b
+Step 8/11 : USER monty
+ ---> Using cache
+ ---> 789b5a0f928f
+Step 9/11 : WORKDIR /home/monty
+ ---> Using cache
+ ---> b51b2aefab77
+Step 10/11 : ENTRYPOINT [ "/usr/bin/tini", "--" ]
+ ---> Using cache
+ ---> 6180029ac440
+Step 11/11 : CMD [ "jupyter", "notebook", "--ip=0.0.0.0", "--port=3000", "--no-browser", "--notebook-dir=/home/monty/"]
+ ---> Using cache
+ ---> 23ddcd90dec2
+Successfully built 23ddcd90dec2
+Successfully tagged anaconda:latest
+Creating anaconda-python-3.7 ... 
+[1A[2KCreating anaconda-python-3.7 ... [32mdone[0m[1BCreating network "anaconda-env_default" with the default driver
+Building anaconda
+Step 1/11 : FROM debian:latest
+ ---> 67e34c1c9477
+Step 2/11 : ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
+ ---> Using cache
+ ---> 73021ce7352f
+Step 3/11 : ENV PATH /opt/conda/bin:$PATH
+ ---> Using cache
+ ---> a32f8369486e
+Step 4/11 : RUN apt-get update --fix-missing && apt-get install -y wget bzip2 ca-certificates     libglib2.0-0 libxext6 libsm6 libxrender1     git mercurial subversion
+ ---> Using cache
+ ---> 08afce3cee4a
+Step 5/11 : RUN wget --quiet https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh -O ~/anaconda.sh &&     /bin/bash ~/anaconda.sh -b -p /opt/conda &&     rm ~/anaconda.sh &&     ln -s /opt/conda/etc/profile.d/conda.sh /etc/profile.d/conda.sh &&     echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc &&     echo "conda activate base" >> ~/.bashrc
+ ---> Using cache
+ ---> cc71dee7f1c4
+Step 6/11 : RUN apt-get install -y curl grep sed dpkg &&     TINI_VERSION=`curl https://github.com/krallin/tini/releases/latest | grep -o "/v.*\"" | sed 's:^..\(.*\).$:\1:'` &&     curl -L "https://github.com/krallin/tini/releases/download/v${TINI_VERSION}/tini_${TINI_VERSION}.deb" > tini.deb &&     dpkg -i tini.deb &&     rm tini.deb &&     apt-get clean
+ ---> Using cache
+ ---> 8f17ba5d9dcc
+Step 7/11 : RUN useradd -ms /bin/bash monty
+ ---> Using cache
+ ---> f39688d09f1b
+Step 8/11 : USER monty
+ ---> Using cache
+ ---> 789b5a0f928f
+Step 9/11 : WORKDIR /home/monty
+ ---> Using cache
+ ---> b51b2aefab77
+Step 10/11 : ENTRYPOINT [ "/usr/bin/tini", "--" ]
+ ---> Using cache
+ ---> 6180029ac440
+Step 11/11 : CMD [ "jupyter", "notebook", "--ip=0.0.0.0", "--port=3000", "--no-browser", "--notebook-dir=/home/monty/"]
+ ---> Using cache
+ ---> 23ddcd90dec2
+Successfully built 23ddcd90dec2
+Successfully tagged anaconda:latest
+Creating anaconda-python-3.7 ... 
+[1A[2KCreating anaconda-python-3.7 ... [32mdone[0m[1B
