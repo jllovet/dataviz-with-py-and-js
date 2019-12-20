@@ -1,12 +1,10 @@
 notes*
 
 # Private Environment Variables 
-experiments/.env
-exercises/.env
-project/.env
+**/.env
 
 # Experiments
 /experiments/docker/anaconda-env/logs/*
 */anaconda-env/app/notebooks/.ipynb_checkpoints/*
 /experiments/docker/anaconda-env/data/nobel_winners*.csv
-
+/experiments/docker/anaconda-env/db/mysql/data/

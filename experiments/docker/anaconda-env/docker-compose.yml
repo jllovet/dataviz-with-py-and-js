@@ -28,4 +28,78 @@ services:
       - "./data:/home/monty/data"
       - "./logs:/home/monty/logs"
     # depends_on:
+  
+  mysql:
+    image: mysql:5.7
+    env_file: .env
+    volumes:
+      - "./db/mysql/my.conf:/etc/mysql/conf.d/config-file.cnf"
+      - "./db/mysql/data:/var/lib/mysql:rw"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    ports:
+      - "3308:3306"
+  
+  mysql-client:
+    image: mysql:5.7
+    depends_on: 
+      - mysql
+    env_file: .env
+    command: mysql --user=${MYSQL_USER} --password=${MYSQL_PASSWORD} --host=mysql --database=${MYSQL_DATABASE}
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
 
+  mysql-admin:
+    image: adminer
+    ports:
+      - 8088:8080
+    depends_on: 
+      - mysql
+
+  mongo:
+    image: "mongo:4.0.12"
+    container_name: "mongo"
+    restart: "always"
+    environment: 
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_ROOT_USER}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_ROOT_PASSWORD}
+      MONGO_INITDB_DATABASE: ${MONGO_INITDB_DATABASE}
+    volumes:
+      - "./db/mongo/init/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro"
+    ports: 
+      - ${MONGODB_PORT}:27017
+
+  mongo-express:
+    image: "mongo-express:0.49.0"
+    container_name: "mongo-express"
+    restart: "always"
+    environment:
+      ME_CONFIG_BASICAUTH_USERNAME: ${MONGOEXPRESS_LOGIN}
+      ME_CONFIG_BASICAUTH_PASSWORD: ${MONGOEXPRESS_PASSWORD}
+      ME_CONFIG_MONGODB_ENABLE_ADMIN: ${ME_CONFIG_MONGODB_ENABLE_ADMIN}
+      # Following three needed if ME_CONFIG_MONGODB_ENABLE_ADMIN is false
+      ME_CONFIG_MONGODB_AUTH_DATABASE: ${MONGODB_AUTH_DATABASE}
+      # ME_CONFIG_MONGODB_AUTH_USERNAME: ${MONGO_ROOT_USER}
+      # ME_CONFIG_MONGODB_AUTH_PASSWORD: ${MONGO_ROOT_PASSWORD}
+      ME_CONFIG_MONGODB_ADMINUSERNAME: ${MONGO_ROOT_USER}
+      ME_CONFIG_MONGODB_ADMINPASSWORD: ${MONGO_ROOT_PASSWORD}
+      ME_CONFIG_MONGODB_PORT: ${MONGODB_PORT}
+      ME_CONFIG_MONGODB_SERVER: ${MONGODB_SERVER}
+      ME_CONFIG_OPTIONS_EDITORTHEME: ${ME_CONFIG_OPTIONS_EDITORTHEME}
+      # ME_CONFIG_REQUEST_SIZE: 
+      # ME_CONFIG_SITE_BASEURL: 
+      # ME_CONFIG_SITE_COOKIESECRET: 
+      # ME_CONFIG_SITE_SESSIONSECRET: 
+      # ME_CONFIG_SITE_SSL_ENABLED: 
+      # ME_CONFIG_SITE_SSL_CRT_PATH: 
+      # ME_CONFIG_SITE_SSL_KEY_PATH: 
+    ports:
+      - "8081:8081"
+    depends_on:
+      - "mongo"
