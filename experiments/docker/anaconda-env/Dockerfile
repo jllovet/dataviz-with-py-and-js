@@ -2,11 +2,6 @@
 # Base Dockerfile pulled from: https://hub.docker.com/r/continuumio/anaconda3/dockerfile
 FROM debian:latest
 
-#  $ docker build . -t continuumio/anaconda3:latest -t continuumio/anaconda3:5.3.0
-#  $ docker run --rm -it continuumio/anaconda3:latest /bin/bash
-#  $ docker push continuumio/anaconda3:latest
-#  $ docker push continuumio/anaconda3:5.3.0
-
 ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
 ENV PATH /opt/conda/bin:$PATH
 
@@ -29,15 +24,15 @@ RUN apt-get install -y curl grep sed dpkg && \
     rm tini.deb && \
     apt-get clean
 
+COPY ./conda-packages.sh ./conda-packages.sh
+RUN chmod +x ./conda-packages.sh
+RUN /bin/bash ./conda-packages.sh && \
+    rm ./conda-packages.sh
+
 RUN useradd -ms /bin/bash monty
 USER monty
 WORKDIR /home/monty
-
 ENTRYPOINT [ "/usr/bin/tini", "--" ]
 
 # CMD [ "jupyter", "notebook", "--ip=0.0.0.0", "--port=3000", "--no-browser", "--notebook-dir=/usr/src/", "--allow-root"]
 CMD [ "jupyter", "notebook", "--ip=0.0.0.0", "--port=3000", "--no-browser", "--notebook-dir=/home/monty/"]
-
-# docker run --name test -it anaconda
-# docker exec -it <container name> /bin/bash
-# The commands above will run an interactive terminal in the container

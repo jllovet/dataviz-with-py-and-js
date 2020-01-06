@@ -3,6 +3,7 @@ services:
   anaconda:
     image: anaconda
     container_name: "anaconda-python-3.7"
+    env_file: .env
     user: "monty"
     logging:
       driver: "json-file"
@@ -27,7 +28,9 @@ services:
       - "./app:/home/monty/app"
       - "./data:/home/monty/data"
       - "./logs:/home/monty/logs"
-    # depends_on:
+    depends_on:
+      - mysql
+      - mongo
   
   mysql:
     image: mysql:5.7
@@ -37,23 +40,23 @@ services:
       - "./db/mysql/data:/var/lib/mysql:rw"
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      # MYSQL_DATABASE: ${MYSQL_DATABASE}
       MYSQL_USER: ${MYSQL_USER}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     ports:
-      - "3308:3306"
+      - ${MYSQL_PORT}:3306
   
-  mysql-client:
-    image: mysql:5.7
-    depends_on: 
-      - mysql
-    env_file: .env
-    command: mysql --user=${MYSQL_USER} --password=${MYSQL_PASSWORD} --host=mysql --database=${MYSQL_DATABASE}
-    environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-      MYSQL_DATABASE: ${MYSQL_DATABASE}
-      MYSQL_USER: ${MYSQL_USER}
-      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+  # mysql-client:
+  #   image: mysql:5.7
+  #   depends_on: 
+  #     - mysql
+  #   env_file: .env
+  #   command: mysql --user=${MYSQL_USER} --password=${MYSQL_PASSWORD} --host=mysql --database=${MYSQL_DATABASE}
+  #   environment:
+  #     MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+  #     MYSQL_DATABASE: ${MYSQL_DATABASE}
+  #     MYSQL_USER: ${MYSQL_USER}
+  #     MYSQL_PASSWORD: ${MYSQL_PASSWORD}
 
   mysql-admin:
     image: adminer
